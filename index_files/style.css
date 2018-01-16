@@ -7,10 +7,10 @@
 		padding:0px;
 		background: url(bodybg.gif) repeat #999999;
             	font-family: trebuchet ms, helvetica, verdana;
-            	font-size: 9pt;		
+            	font-size: 9pt;		 /*used for size of text on mouse hover */
 		}
 
-	td {             	
+	td {             	 /* used for top bar seperating pages */
 		font-family: trebuchet ms, helvetica, verdana;
             	font-size: 9pt; 
 		color:#000000;
@@ -24,7 +24,7 @@
 		padding-top: 10px;
 		}
 	
-	#pixels {
+	#pixels { /* used for ad board */
 		position: relative;	
 		top:0;
 		left:0;
@@ -36,7 +36,7 @@
 		text-align: center;
 		}
 
-	#note {
+	#note { /* used for very bottom bar */
 		color: #999999;
 		font-family: trebuchet ms, arial, helvetica;
             	font-size: 8pt; 
@@ -131,7 +131,7 @@
 		position: relative;	
 		top:0;
 		left:0;
-		width:1000px;
+		width:1900px;
 		height:45;
 		border:0;
 		margin-left: auto; 
