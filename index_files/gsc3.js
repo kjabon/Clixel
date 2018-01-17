@@ -84,7 +84,7 @@ function mtrack(e) {
 
 
 
-	if ((l_ycurs <= 0) || (l_ycurs > 100) || (l_xcurs <= 0) || (l_xcurs > 100)){
+	if ((l_ycurs <= 0) || (l_ycurs > 110) || (l_xcurs <= 0) || (l_xcurs > 100)){ //Used for hover info panel on empty pixels
 		document.getElementById('d').style.display = "none";
 	} else {
 		document.getElementById('d').style.display = "";
@@ -93,7 +93,7 @@ function mtrack(e) {
 			document.getElementById('ycoord').innerHTML = l_ycurs + ")";
 		} else {
 			if (sTitle == "") {
-				document.getElementById('xcoord').innerHTML = "These pixels are not available, sorry";
+				document.getElementById('xcoord').innerHTML = "Purchase these pixels using the link above!"; //Used for pixels with no ads
 					document.getElementById('xcoord').innerHTML += " (" + l_xcurs + ",";
 					document.getElementById('ycoord').innerHTML = l_ycurs + ")";
 			} else {	

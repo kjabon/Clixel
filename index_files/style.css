@@ -5,16 +5,16 @@
 	body {
 		margin: 0px 0px 0px 0px;
 		padding:0px;
-		background-color: #121212; /* image file used for background of whole site */
+		background-color: #121212; /* used for background of whole site */
             	font-family: trebuchet ms, helvetica, verdana;
             	font-size: 9pt;		 /*used for size of text on mouse hover */
 		}
 
-	td {             	 /* used for top navigation bar */
+	td {             	 
 		font-family: trebuchet ms, helvetica, verdana;
             	font-size: 9pt; 
 		color:#000000;
-		}
+		} /* used for top navigation bar */
 
 	#pageads {             	
 		vertical-align: top;
