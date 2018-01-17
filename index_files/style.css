@@ -5,7 +5,7 @@
 	body {
 		margin: 0px 0px 0px 0px;
 		padding:0px;
-		background: url(bodybg.gif) repeat #999999;
+		background-color: #121212; /* image file used for background of whole site */
             	font-family: trebuchet ms, helvetica, verdana;
             	font-size: 9pt;		 /*used for size of text on mouse hover */
 		}
