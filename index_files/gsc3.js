@@ -54,7 +54,7 @@ else document.captureEvents(Event.MOUSEMOVE);
 document.onmousemove=mtrack;
 
 function mtrack(e) {
-	var lhs = (document.body.offsetWidth - 1000)/2;
+	var lhs = (document.body.offsetWidth - 2221); //Changes where the search area starts for ad block//
 	var xcurs = 0;
 	var ycurs = 0;
 
@@ -84,7 +84,7 @@ function mtrack(e) {
 
 
 
-	if ((l_ycurs <= 0) || (l_ycurs > 110) || (l_xcurs <= 0) || (l_xcurs > 100)){ //Used for hover info panel on empty pixels
+	if ((l_ycurs <= 0) || (l_ycurs > 110) || (l_xcurs <= 0) || (l_xcurs > 190)){ //Used for hover info panel on empty pixels
 		document.getElementById('d').style.display = "none";
 	} else {
 		document.getElementById('d').style.display = "";
