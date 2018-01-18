@@ -73,7 +73,7 @@ function mtrack(e) {
 	if (navigator.appName == 'Netscape') {
 		document.getElementById('d').style.left=xcurs + 10;
 		document.getElementById('d').style.top=ycurs;
-		l_xcurs = Math.ceil((xcurs - lhs)/10) + 1;
+		l_xcurs = Math.ceil((xcurs - lhs)) + 1; //was  (xcurs - lhs)/10) KEEP MANIPULATING THIS//
 		l_ycurs = Math.ceil((ycurs - headerHeight)/10);
 	} else {
 		l_xcurs = Math.ceil((xcurs - lhs)/10) + 1;
@@ -84,7 +84,7 @@ function mtrack(e) {
 
 
 
-	if ((l_ycurs <= 0) || (l_ycurs > 110) || (l_xcurs <= 0) || (l_xcurs > 190)){ //Used for hover info panel on empty pixels
+	if ((l_ycurs <= 0) || (l_ycurs > 1000) || (l_xcurs <= 0) || (l_xcurs > 1000)){ //Used for hover info panel on empty pixels
 		document.getElementById('d').style.display = "none";
 	} else {
 		document.getElementById('d').style.display = "";
