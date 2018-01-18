@@ -54,7 +54,7 @@ else document.captureEvents(Event.MOUSEMOVE);
 document.onmousemove=mtrack;
 
 function mtrack(e) {
-	var lhs = (document.body.offsetWidth - 2221); //Changes where the search area starts for ad block//
+	var lhs = (document.body.offsetWidth - 2221); //Changes where the search area starts for ad block. OffsetWidth supposedly display width of an area//
 	var xcurs = 0;
 	var ycurs = 0;
 
@@ -63,8 +63,8 @@ function mtrack(e) {
 		ycurs = e.pageY;
 //		showMode = false;
 	} else {
-		xcurs = event.clientX;
-		ycurs = event.clientY;
+		xcurs = event.clientX; //clientX supposedly gets the coordinates of the page//
+		ycurs = event.clientY; //clientY supposedly gets the coordinates of the page//
 	}
 
 	var l_xcurs;
