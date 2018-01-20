@@ -84,7 +84,7 @@ function mtrack(e) {
 
 
 
-	if ((l_ycurs <= 0) || (l_ycurs > 800) || (l_xcurs <= 0) || (l_xcurs > 1250)){ //Used for hover info panel on empty pixels, for 3 million: ((l_ycurs <= 0) || (l_ycurs > 1250) || (l_xcurs <= 0) || (l_xcurs > 2400))//
+	if ((l_ycurs <= 0) || (l_ycurs > 800) || (l_xcurs <= 0) || (l_xcurs > 1666)){ //Used for hover info panel on empty pixels, for 3 million: ((l_ycurs <= 0) || (l_ycurs > 1250) || (l_xcurs <= 0) || (l_xcurs > 2400))//
 		document.getElementById('d').style.display = "none";
 	} else {
 		document.getElementById('d').style.display = "";
