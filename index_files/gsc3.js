@@ -1,6 +1,6 @@
 
 
-
+//Basically I don't really get yet where it draws the box on the page, and I'd like to change it so that when your mouse is on the right, the box gets drawn to the left of the mouse.
 
 
 /*
@@ -54,7 +54,7 @@ else document.captureEvents(Event.MOUSEMOVE);
 document.onmousemove=mtrack;
 
 function mtrack(e) {
-	var lhs = (document.body.offsetWidth - 2221); //Changes where the search area starts for ad block. OffsetWidth supposedly display width of an area//
+	var lhs = 0;//(document.body.offsetWidth - 1333); //Changes where the search area starts for ad block. OffsetWidth supposedly display width of an area//
 	var xcurs = 0;
 	var ycurs = 0;
 
@@ -70,7 +70,7 @@ function mtrack(e) {
 	var l_xcurs;
 	var l_ycurs;
 
-	if (navigator.appName == 'Netscape') {
+	if (navigator.appName == 'Netscape') {//we're not using netscape so I doubt this block matters much
 		document.getElementById('d').style.left=xcurs + 10;
 		document.getElementById('d').style.top=ycurs;
 		l_xcurs = Math.ceil((xcurs - lhs)*.6575) + 6; //was  (xcurs - lhs)/10)+1(?), for 3 mill: ((xcurs - lhs)*1.262) + 12//
@@ -84,6 +84,7 @@ function mtrack(e) {
 
 
 
+	if ((l_ycurs <= 0) || (l_ycurs > 800) || (l_xcurs <= 0) || (l_xcurs > 1250)){ //Used for hover info panel on empty pixels, for 3 million: ((l_ycurs <= 0) || (l_ycurs > 1250) || (l_xcurs <= 0) || (l_xcurs > 2400))//
 		document.getElementById('d').style.display = "none";
 	} else {
 		document.getElementById('d').style.display = "";
@@ -98,7 +99,7 @@ function mtrack(e) {
 			} else {	
 				document.getElementById('xcoord').innerHTML = sTitle;
 				document.getElementById('ycoord').innerHTML = "";
-			}
+			}//The previous 6 lines are for writing either the title, which contains the mouseover box's coordinates already, or the current location.
 		}
 	}
 
