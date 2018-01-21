@@ -70,7 +70,7 @@ function mtrack(e) {
 	var l_xcurs;
 	var l_ycurs;
 
-	if (navigator.appName == 'Netscape') {//we're not using netscape so I doubt this block matters much
+	if (navigator.appName == 'Netscape') {
 		document.getElementById('d').style.left=xcurs + 10;
 		document.getElementById('d').style.top=ycurs;
 		l_xcurs = Math.ceil((xcurs - lhs)*.6575) + 6; //was  (xcurs - lhs)/10)+1(?), for 3 mill: ((xcurs - lhs)*1.262) + 12//
