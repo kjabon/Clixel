@@ -54,7 +54,7 @@ else document.captureEvents(Event.MOUSEMOVE);
 document.onmousemove=mtrack;
 
 function mtrack(e) {
-	var lhs = 0;//(document.body.offsetWidth - 1333); //Changes where the search area starts for ad block. OffsetWidth supposedly display width of an area//
+	var lhs = (document.body.offsetWidth-1333); //Changes where the search area starts for ad block. OffsetWidth supposedly display width of an area//
 	var xcurs = 0;
 	var ycurs = 0;
 
