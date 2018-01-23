@@ -28,8 +28,8 @@
 		position: relative;	
 		top:0;
 		left:0;
-		width:auto;
-		height:1100;
+		width:1000; /*WAS CHANGED TO AUTO - WHY?*/
+		height:1000; /*WHY THE EXTRA SPACE AT BOTTOM??*/
 		border:0;
 		margin-left: auto; 
 		margin-right: auto;
@@ -131,6 +131,7 @@
 		position: relative;	
 		top:0;
 		left:0;
+		width:1000px;
 		height:45;
 		border:0;
 		margin-left: auto; 

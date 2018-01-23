@@ -54,7 +54,7 @@ else document.captureEvents(Event.MOUSEMOVE);
 document.onmousemove=mtrack;
 
 function mtrack(e) {
-	var lhs = (document.body.offsetWidth-1333); //Changes where the search area starts for ad block. OffsetWidth supposedly display width of an area//
+	var lhs = (document.body.offsetWidth-1000)/2; //Changes where the search area starts for ad block. OffsetWidth supposedly display width of an area//
 	var xcurs = 0;
 	var ycurs = 0;
 
@@ -73,8 +73,8 @@ function mtrack(e) {
 	if (navigator.appName == 'Netscape') {
 		document.getElementById('d').style.left=xcurs + 10;
 		document.getElementById('d').style.top=ycurs;
-		l_xcurs = Math.ceil((xcurs - lhs)*.6575) + 6; //was  (xcurs - lhs)/10)+1(?), for 3 mill: ((xcurs - lhs)*1.262) + 12//
-		l_ycurs = Math.ceil((ycurs - headerHeight)*.7266)-2; //was  ((ycurs - headerHeight)/10), for 3 mill: ((ycurs - headerHeight)*1.137)-3//
+		l_xcurs = Math.ceil((xcurs - lhs)/10.1)+1; //was  (xcurs - lhs)/10)+1, STARTS TOO EARLY ON LEFT - FIX LATER//
+		l_ycurs = Math.ceil((ycurs - headerHeight)/10.02); //was  ((ycurs - headerHeight)/10), STARTS TOO EARLY - FIX LATER//
 	} else {
 		l_xcurs = Math.ceil((xcurs - lhs)/10) + 1;
 		l_ycurs = Math.ceil((ycurs - headerHeight + document.body.scrollTop)/10);
@@ -84,7 +84,7 @@ function mtrack(e) {
 
 
 
-	if ((l_ycurs <= 0) || (l_ycurs > 800) || (l_xcurs <= 0) || (l_xcurs > 1250)){ //Used for hover info panel on empty pixels, for 3 million: ((l_ycurs <= 0) || (l_ycurs > 1250) || (l_xcurs <= 0) || (l_xcurs > 2400))//
+	if ((l_ycurs <= 0) || (l_ycurs > 100) || (l_xcurs <= 0) || (l_xcurs > 100)){ //Used for hover info panel on empty pixels, for 3 million: ((l_ycurs <= 0) || (l_ycurs > 1250) || (l_xcurs <= 0) || (l_xcurs > 2400))//
 		document.getElementById('d').style.display = "none";
 	} else {
 		document.getElementById('d').style.display = "";
