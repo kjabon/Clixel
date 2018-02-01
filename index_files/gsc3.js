@@ -54,7 +54,7 @@ else document.captureEvents(Event.MOUSEMOVE);
 document.onmousemove=mtrack;
 
 function mtrack(e) {
-	var lhs = (document.body.offsetWidth-1000)/2; //Changes where the search area starts for ad block. OffsetWidth supposedly display width of an area//
+	var lhs = (document.body.offsetWidth-982)/2; //(used to be -1000) Changes where the search area starts for ad block. OffsetWidth supposedly display width of an area//
 	var xcurs = 0;
 	var ycurs = 0;
 
@@ -73,7 +73,7 @@ function mtrack(e) {
 	if (navigator.appName == 'Netscape') {
 		document.getElementById('d').style.left=xcurs + 10;
 		document.getElementById('d').style.top=ycurs;
-		l_xcurs = Math.ceil((xcurs - lhs)/10.1)+1; //was  (xcurs - lhs)/10)+1, STARTS TOO EARLY ON LEFT - FIX LATER//
+		l_xcurs = Math.ceil((xcurs - lhs)/10)+1; //was  (xcurs - lhs)/10)+1, STARTS TOO EARLY ON LEFT - FIX LATER//
 		l_ycurs = Math.ceil((ycurs - headerHeight)/10.02); //was  ((ycurs - headerHeight)/10), STARTS TOO EARLY - FIX LATER//
 	} else {
 		l_xcurs = Math.ceil((xcurs - lhs)/10) + 1;
