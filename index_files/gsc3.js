@@ -46,7 +46,7 @@ function da() {
 	document.getElementById('so').src = "img-pix/btnnor0.gif";
 	bH = false;
 }
-var headerHeight = 44;
+var headerHeight = 44; //Changes start (top) of ad board//
 
 
 if (document.all){}
@@ -54,7 +54,7 @@ else document.captureEvents(Event.MOUSEMOVE);
 document.onmousemove=mtrack;
 
 function mtrack(e) {
-	var lhs = (document.body.offsetWidth-982)/2; //(used to be -1000) Changes where the search area starts for ad block. OffsetWidth supposedly display width of an area//
+	var lhs = (document.body.offsetWidth-1000)/2; //(used to be -1000) Changes where the search area starts for ad block. OffsetWidth supposedly display width of an area//
 	var xcurs = 0;
 	var ycurs = 0;
 
@@ -73,8 +73,8 @@ function mtrack(e) {
 	if (navigator.appName == 'Netscape') {
 		document.getElementById('d').style.left=xcurs + 10;
 		document.getElementById('d').style.top=ycurs;
-		l_xcurs = Math.ceil((xcurs - lhs)/10)+1; //Changes search width for ad board//
-		l_ycurs = Math.ceil((ycurs - headerHeight)/10); //was  ((ycurs - headerHeight)/10), STARTS TOO EARLY - FIX LATER//
+		l_xcurs = Math.ceil((xcurs - lhs))+1; //Changes search width for ad board//
+		l_ycurs = Math.ceil((ycurs - headerHeight)); //Changes search height for ad board//
 	} else {
 		l_xcurs = Math.ceil((xcurs - lhs)/10) + 1;
 		l_ycurs = Math.ceil((ycurs - headerHeight + document.body.scrollTop)/10);
@@ -84,7 +84,7 @@ function mtrack(e) {
 
 
 
-	if ((l_ycurs <= 0) || (l_ycurs > 100) || (l_xcurs <= 0) || (l_xcurs > 100)){ //Used for hover info panel on empty pixels, for 3 million: ((l_ycurs <= 0) || (l_ycurs > 1250) || (l_xcurs <= 0) || (l_xcurs > 2400))//
+	if ((l_ycurs <= 0) || (l_ycurs > 1000) || (l_xcurs <= 0) || (l_xcurs > 1000)){ //Used for hover info panel on empty pixels//
 		document.getElementById('d').style.display = "none";
 	} else {
 		document.getElementById('d').style.display = "";
