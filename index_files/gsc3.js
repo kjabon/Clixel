@@ -46,7 +46,7 @@ function da() {
 	document.getElementById('so').src = "img-pix/btnnor0.gif";
 	bH = false;
 }
-var headerHeight = 65;
+var headerHeight = 44;
 
 
 if (document.all){}
@@ -73,8 +73,8 @@ function mtrack(e) {
 	if (navigator.appName == 'Netscape') {
 		document.getElementById('d').style.left=xcurs + 10;
 		document.getElementById('d').style.top=ycurs;
-		l_xcurs = Math.ceil((xcurs - lhs)/10)+1; //was  (xcurs - lhs)/10)+1, STARTS TOO EARLY ON LEFT - FIX LATER//
-		l_ycurs = Math.ceil((ycurs - headerHeight)/10.02); //was  ((ycurs - headerHeight)/10), STARTS TOO EARLY - FIX LATER//
+		l_xcurs = Math.ceil((xcurs - lhs)/10)+1; //Changes search width for ad board//
+		l_ycurs = Math.ceil((ycurs - headerHeight)/10); //was  ((ycurs - headerHeight)/10), STARTS TOO EARLY - FIX LATER//
 	} else {
 		l_xcurs = Math.ceil((xcurs - lhs)/10) + 1;
 		l_ycurs = Math.ceil((ycurs - headerHeight + document.body.scrollTop)/10);
