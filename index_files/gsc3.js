@@ -97,7 +97,7 @@ function mtrack(e) {
 					document.getElementById('xcoord').innerHTML += " (" + l_xcurs + ",";
 					document.getElementById('ycoord').innerHTML = l_ycurs + ")";
 			} else {	
-				document.getElementById('xcoord').innerHTML = sTitle;
+				document.getElementById('xcoord').innerHTML = sTitle + " " + "(" + l_xcurs + "," + l_ycurs + ")"; //Changed to display coord also//
 				document.getElementById('ycoord').innerHTML = "";
 			}//The previous 6 lines are for writing either the title, which contains the mouseover box's coordinates already, or the current location.
 		}
