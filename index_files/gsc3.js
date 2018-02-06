@@ -71,7 +71,7 @@ function mtrack(e) {
 	var l_ycurs;
 
 	if (navigator.appName == 'Netscape') {
-		document.getElementById('d').style.left=xcurs + 10;
+		document.getElementById('d').style.left=xcurs + 11; //Changes ad hover display box start//
 		document.getElementById('d').style.top=ycurs;
 		l_xcurs = Math.ceil((xcurs - lhs))+1; //Changes search width for ad board//
 		l_ycurs = Math.ceil((ycurs - headerHeight)); //Changes search height for ad board//
