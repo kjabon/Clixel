@@ -69,6 +69,10 @@ function mtrack(e) {
 
 	var l_xcurs;
 	var l_ycurs;
+	var l_xcurs_random=Math.floor(Math.random() * 1000) + 1;
+	var l_ycurs_random=Math.floor(Math.random() * 1000) + 1;
+	var xxcomp = l_xcurs==l_xcurs_random;
+	var yycomp = l_ycurs==l_ycurs_random;
 
 	if (navigator.appName == 'Netscape') {
 		document.getElementById('d').style.left=xcurs + 11; //Changes ad hover display box start//
@@ -81,8 +85,6 @@ function mtrack(e) {
 		document.getElementById('d').style.top=ycurs + document.body.scrollTop - 5;
 		document.getElementById('d').style.left=xcurs + 14 + document.body.scrollLeft;
 	}
-
-
 
 	if ((l_ycurs <= 0) || (l_ycurs > 1000) || (l_xcurs <= 0) || (l_xcurs > 1000)){ //Used for hover info panel on empty pixels//
 		document.getElementById('d').style.display = "none";
