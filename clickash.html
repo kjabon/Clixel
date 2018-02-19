@@ -75,13 +75,9 @@ AMOE: Use 1/million random number generator and compare to 1 (true random number
   Login with Google
 </button> <!--Login buttons-->
 
-4
-
  <script type="text/javascript" src="./index_files/randomRequest.js">
-            getNewThings("https://api.random.org/json-rpc/1/invoke");
-        </script>
-
-4
+            getNewThings("http://www.random.org/integers/?num=1&min=1&max=1000&col=1&base=10&format=plain&rnd=new");
+        </script>  <!--Used to make "true" random using random.org or similar process. Does not currently work-->
 
   <div class="w3-display-right w3-text-white" style="padding:30px; z-index: 1"> <!--"New to HiddenPixel" button-->
 
