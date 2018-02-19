@@ -53,19 +53,14 @@ var l_xcurs;
 var l_ycurs;
 var l_xcurs_random=Math.floor(Math.random() * 1000) + 1;
 var l_ycurs_random=Math.floor(Math.random() * 1000) + 1;
-var xsquared = l_xcurs - l_xcurs_random;
-var ysquared = Math.pow(l_ycurs - l_ycurs_random, 2);
-var xysquared = xsquared + ysquared;
-var xydist = Math.sqrt(xysquared);
-var xydist_rounded = Math.round(xydist);
 
 function randomCompare(){
-	
+
 		if (l_xcurs == l_xcurs_random && l_ycurs == l_ycurs_random) {
 			alert('You win! Congratulations!')
 		}
 		else {
-			alert("I'm sorry, but you chose (" + l_xcurs + "," + l_ycurs + ") and the winning pixel was (" + l_xcurs_random + "," + l_ycurs_random + ").\nYou were " + xydist_rounded + " away from the winning pixel.")
+			alert("I'm sorry, but you chose (" + l_xcurs + "," + l_ycurs + ") and the winning pixel was (" + l_xcurs_random + "," + l_ycurs_random + ").\nYou were " + Math.round(Math.sqrt((Math.pow(l_xcurs - l_xcurs_random, 2) + Math.pow(l_ycurs - l_ycurs_random, 2)))) + " pixels away from the winning pixel.")
 		}
 } //compares the randomly selected number to the one the participant chose.//
 
