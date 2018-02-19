@@ -46,8 +46,28 @@ function da() {
 	document.getElementById('so').src = "img-pix/btnnor0.gif";
 	bH = false;
 }
+
 var headerHeight = 44; //Changes start (top) of ad board//
 
+var l_xcurs;
+var l_ycurs;
+var l_xcurs_random=Math.floor(Math.random() * 1000) + 1;
+var l_ycurs_random=Math.floor(Math.random() * 1000) + 1;
+var xsquared = l_xcurs - l_xcurs_random;
+var ysquared = Math.pow(l_ycurs - l_ycurs_random, 2);
+var xysquared = xsquared + ysquared;
+var xydist = Math.sqrt(xysquared);
+var xydist_rounded = Math.round(xydist);
+
+function randomCompare(){
+	
+		if (l_xcurs == l_xcurs_random && l_ycurs == l_ycurs_random) {
+			alert('You win! Congratulations!')
+		}
+		else {
+			alert("I'm sorry, but you chose (" + l_xcurs + "," + l_ycurs + ") and the winning pixel was (" + l_xcurs_random + "," + l_ycurs_random + ").\nYou were " + xydist_rounded + " away from the winning pixel.")
+		}
+} //compares the randomly selected number to the one the participant chose.//
 
 if (document.all){}
 else document.captureEvents(Event.MOUSEMOVE);
@@ -66,13 +86,6 @@ function mtrack(e) {
 		xcurs = event.clientX; //clientX supposedly gets the coordinates of the page//
 		ycurs = event.clientY; //clientY supposedly gets the coordinates of the page//
 	}
-
-	var l_xcurs;
-	var l_ycurs;
-	var l_xcurs_random=Math.floor(Math.random() * 1000) + 1;
-	var l_ycurs_random=Math.floor(Math.random() * 1000) + 1;
-	var xxcomp = l_xcurs==l_xcurs_random;
-	var yycomp = l_ycurs==l_ycurs_random;
 
 	if (navigator.appName == 'Netscape') {
 		document.getElementById('d').style.left=xcurs + 11; //Changes ad hover display box start//
