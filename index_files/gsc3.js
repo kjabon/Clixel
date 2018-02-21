@@ -62,7 +62,22 @@ function randomCompare(){
 		else {
 			alert("I'm sorry, but you chose (" + l_xcurs + "," + l_ycurs + ") and the winning pixel was (" + l_xcurs_random + "," + l_ycurs_random + ").\nYou were " + Math.round(Math.sqrt((Math.pow(l_xcurs - l_xcurs_random, 2) + Math.pow(l_ycurs - l_ycurs_random, 2)))) + " pixels away from the winning pixel.")
 		}
-} //compares the randomly selected number to the one the participant chose.//
+} //compares the randomly selected number to the one the participant chose//
+
+var l_xcurs_faux=Math.floor(Math.random() * 1000) + 1;
+var l_ycurs_faux=Math.floor(Math.random() * 1000) + 1;
+
+function amoeButton(){
+
+	if (l_xcurs_faux == l_xcurs_random && l_ycurs_faux == l_ycurs_random) {
+		alert('You win! Congratulations!');
+		location.reload()
+	}
+	else{
+		alert("I'm sorry, but you chose (" + l_xcurs_faux + "," + l_ycurs_faux + ") and the winning pixel was (" + l_xcurs_random + "," + l_ycurs_random + ").\nYou were " + Math.round(Math.sqrt((Math.pow(l_xcurs_faux - l_xcurs_random, 2) + Math.pow(l_ycurs_faux - l_ycurs_random, 2)))) + " pixels away from the winning pixel.")
+		location.reload()
+	}
+}
 
 if (document.all){}
 else document.captureEvents(Event.MOUSEMOVE);
