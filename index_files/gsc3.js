@@ -47,6 +47,10 @@ function da() {
 	bH = false;
 }
 
+function getnewthings(){
+	alert(println(data));
+}
+
 var headerHeight = 44; //Changes start (top) of ad board//
 
 var l_xcurs;

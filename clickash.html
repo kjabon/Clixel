@@ -49,6 +49,7 @@ AMOE: Use 1/million random number generator and compare to 1 (true random number
 	<meta name="description" content="The website of Jason Eaton and Kenny Jabon, entrepreneurs who hopes to pay off their student loans by selling 1 million pixels of internet ad space.">
 	<meta name="ROBOTS" content="ALL">
 	<link rel="stylesheet" type="text/css" href="./index_files/style.css">
+	<script type="text/javascript" src="./index_files/gsc3.js"></script>
 
 </head><body bgcolor="#000000">
 
@@ -73,9 +74,7 @@ AMOE: Use 1/million random number generator and compare to 1 (true random number
   Login with Google
 </button> <!--Login buttons-->
 
- <script type="text/javascript" src="./index_files/randomRequest.js">
-            getNewThings("http://www.random.org/integers/?num=1&min=1&max=1000&col=1&base=10&format=plain&rnd=new");
-        </script>  <!--Used to make "true" random using random.org or similar process. Does not currently work-->
+<input id="rndbtn" type="button" value="randomnumbers" onclick="getnewthings();" />  <!--Used to make "true" random using random.org or similar process. Does not currently work-->
 
   <div class="w3-display-right w3-text-white" style="padding:30px; z-index: 1"> <!--"New to HiddenPixel" button-->
 
