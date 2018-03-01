@@ -39,6 +39,9 @@ AMOE: Use 1/million random number generator and compare to 1 (true random number
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -53,49 +56,13 @@ AMOE: Use 1/million random number generator and compare to 1 (true random number
 	<!--Google jquery CDN-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript" src="./index_files/modal.js"></script>
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
 	<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 </head><body bgcolor="#000000">
-
-<div class="container">
-    <h1>Play YouTube or Vimeo Videos in Bootstrap 4 Modal</h1>
-
- <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/sdeCCPQH6pQ" data-target="#myModal">
-  Play Video 1
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-
-      
-      <div class="modal-body">
-
-       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">×</span>
-        </button>        
-        <!-- 16:9 aspect ratio -->
-<div class="embed-responsive embed-responsive-16by9">
-  <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always">></iframe>
-</div>
-        
-        
-      </div>
-
-    </div>
-  </div>
-</div> 
-  
-  
-  
-</div>
 
 	<div id="d" style="position: absolute; z-index: 99; left: 103px; top: 962px; border: 1px solid rgb(0, 0, 255); display: none; background: rgb(255, 255, 255);">
 		<span id="xcoord">Purchase these pixels using the link above! (1,</span><span id="ycoord">85)</span> <!-- Doesn't seem to do much, go to gsc3.js for more info-->
@@ -147,12 +114,13 @@ AMOE: Use 1/million random number generator and compare to 1 (true random number
 	<div id="pixels" style="z-index:1">
 		<map name="Map" id="Map">
 
-<area onmouseover="d(this)" onmouseout="e(this)" onclick="randomCompare()" shape="rect" coords="230,10,940,920" href="http://www.google.com/" title="Google it">
+<area onmouseover="d(this)" onmouseout="e(this)" type="button" class="btn btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/sdeCCPQH6pQ" data-target="#myModal" shape="rect" coords="230,10,940,920" href="http://www.google.com/" title="Google it">
 			
 			<area onmouseover="d(this)" onmouseout="e(this)" shape="rect" coords="140,380,150,390" href="http://ospei.com/d4" title="This is the biggest heart on this page">
 			</map><img name="twee" id="twee" src="./index_files/adboard_money.jpeg" width="1000" height="1000" border="0" ismap="" usemap="#Map" style="position: absolute; top: 0px; left: 0px; border: none">
 			
 		</td><td id="tablebreak" width="1"></td></tr>
+
 		<!-- end actual page content -->
 
 		<tr><td id="note" height="24" colspan="3">Clixel © 2018 Jason Eaton and Kenny Jabon. All rights reserved. We am not responsible for the content of external sites. All ad content is © of their respective owners.
@@ -162,3 +130,26 @@ AMOE: Use 1/million random number generator and compare to 1 (true random number
 		</td></tr>
 	</tbody></table>
 </center>
+
+		<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      
+      <div class="modal-body">
+
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>        
+        <!-- 16:9 aspect ratio -->
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always">></iframe>
+</div>
+        
+        
+      </div>
+
+    </div>
+  </div>
+</div> 
