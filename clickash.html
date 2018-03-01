@@ -32,7 +32,8 @@ Login widget from facebook/google
 CAPTCHA
 AMOE: Use 1/million random number generator and compare to 1 (true random number generator) or how to make it as random as possible
 
-
+Have button show countdown to working
+Make button use original coordinates
 
 >
 
@@ -85,8 +86,6 @@ AMOE: Use 1/million random number generator and compare to 1 (true random number
   Login with Google
 </button> <!--Login buttons-->
 
-<input id="rndbtn" type="button" value="randomnumbers" onclick="getnewthings();" />  <!--Used to make "true" random using random.org or similar process. Does not currently work-->
-
   <div class="w3-display-right w3-text-white" style="padding:30px; z-index: 1"> <!--"New to HiddenPixel" button-->
 
     <p><a href="./clickash main information.html"target="_blank" class="w3-button w3-white w3-padding-medium w3-large w3-opacity w3-hover-opacity-off" style="position:relative; TOP:0px; LEFT:30px; z-index:1;"">New to Clixel? Click here!</a></p>
@@ -114,7 +113,7 @@ AMOE: Use 1/million random number generator and compare to 1 (true random number
 	<div id="pixels" style="z-index:1">
 		<map name="Map" id="Map">
 
-<area onmouseover="d(this)" onmouseout="e(this)" type="button" class="btn btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/sdeCCPQH6pQ" data-target="#myModal" shape="rect" coords="230,10,940,920" href="http://www.google.com/" title="Google it">
+<area onmouseover="d(this)" onmouseout="e(this)" type="button" id="support" class="btn btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/sdeCCPQH6pQ" data-target="#myModal" shape="rect" coords="230,10,940,920" href="http://www.google.com/" title="Google it">
 			
 			<area onmouseover="d(this)" onmouseout="e(this)" shape="rect" coords="140,380,150,390" href="http://ospei.com/d4" title="This is the biggest heart on this page">
 			</map><img name="twee" id="twee" src="./index_files/adboard_money.jpeg" width="1000" height="1000" border="0" ismap="" usemap="#Map" style="position: absolute; top: 0px; left: 0px; border: none">
@@ -135,17 +134,17 @@ AMOE: Use 1/million random number generator and compare to 1 (true random number
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-
       
       <div class="modal-body">
 
        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">×</span>
-        </button>        
+        </button>
         <!-- 16:9 aspect ratio -->
 <div class="embed-responsive embed-responsive-16by9">
   <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always">></iframe>
 </div>
+<button type="button" id="maybewinner" onclick="randomCompare()">Winner?</button>
         
         
       </div>

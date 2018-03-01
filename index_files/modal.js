@@ -8,8 +8,6 @@ $('.video-btn').click(function() {
 });
 console.log($videoSrc);
 
-  
-  
 // when the modal is opened autoplay it  
 $('#myModal').on('shown.bs.modal', function (e) {
     
@@ -22,7 +20,14 @@ $("#video").attr('src',$videoSrc + "?rel=0&showinfo=0&modestbranding=1&autoplay=
 $('#myModal').on('hide.bs.modal', function (e) {
     // a poor man's stop video
     $("#video").attr('src',$videoSrc); 
-}) 
+})
+
+
+// Have random compare "winner" button appear after time//
+$( "#support" ).click(function() {
+  $('#maybewinner').hide().delay(7000).fadeIn(100);
+});
+//$('#maybewinner').hide().delay(3000).fadeIn(2200);
     
     
 
