@@ -27,7 +27,7 @@ $('#myModal').on('hide.bs.modal', function (e) {
 $( "#support" ).click(function() {
 	$("#maybewinner").prop("disabled", true);
         setTimeout(function(){
-        	$("#maybewinner").prop("disabled", false)}, 7000);
+        	$("#maybewinner").prop("disabled", false); $("#maybewinner").text("Winner?")}, 7000);
 		});
   
 // document ready  
