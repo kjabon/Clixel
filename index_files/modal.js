@@ -25,14 +25,10 @@ $('#myModal').on('hide.bs.modal', function (e) {
 
 // Have random compare "winner" button appear after time//
 $( "#support" ).click(function() {
-  $('#maybewinner').hide().delay(7000).fadeIn(100);
-});
-//$('#maybewinner').hide().delay(3000).fadeIn(2200);
-    
-    
-
-
-  
+	$("#maybewinner").prop("disabled", true);
+        setTimeout(function(){
+        	$("#maybewinner").prop("disabled", false)}, 7000);
+		});
   
 // document ready  
 });
