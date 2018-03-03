@@ -19,7 +19,9 @@ $("#video").attr('src',$videoSrc + "?rel=0&showinfo=0&modestbranding=1&autoplay=
 // stop playing the youtube video when I close the modal
 $('#myModal').on('hide.bs.modal', function (e) {
     // a poor man's stop video
-    $("#video").attr('src',$videoSrc); 
+    $("#video").attr('src',$videoSrc);
+    $("#maybewinner").prop("disabled", true);
+    $("#maybewinner").text("Please wait");
 })
 
 
@@ -27,7 +29,7 @@ $('#myModal').on('hide.bs.modal', function (e) {
 $( "#support" ).click(function() {
 	$("#maybewinner").prop("disabled", true);
         setTimeout(function(){
-        	$("#maybewinner").prop("disabled", false); $("#maybewinner").text("Winner?")}, 7000);
+        	$("#maybewinner").prop("disabled", false); $("#maybewinner").text("Winner?")}, 8000);
 		});
   
 // document ready  
