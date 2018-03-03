@@ -29,7 +29,33 @@ $('#myModal').on('hide.bs.modal', function (e) {
 $( "#support" ).click(function() {
 	$("#maybewinner").prop("disabled", true);
         setTimeout(function(){
+        	$("#maybewinner").text("Wait 7")}, 1000);
+
+        setTimeout(function(){
+        	$("#maybewinner").text("Wait 6")}, 2000);
+
+        setTimeout(function(){
+        	$("#maybewinner").text("Wait 5")}, 3000);
+
+        setTimeout(function(){
+        	$("#maybewinner").text("Wait 4")}, 4000);
+        
+        setTimeout(function(){
+        	$("#maybewinner").text("Wait 3")}, 5000);
+
+        setTimeout(function(){
+        	$("#maybewinner").text("Wait 2")}, 6000);
+
+        setTimeout(function(){
+        	$("#maybewinner").text("Wait 1")}, 7000);
+        
+        setTimeout(function(){
         	$("#maybewinner").prop("disabled", false); $("#maybewinner").text("Winner?")}, 8000);
+
+        	//$("#maybewinner").text("Winner? 2"), 4000;
+			//$("#maybewinner").prop("disabled", false)}, 6000;
+			
+			//$("#maybewinner").prop("disabled", false); $("#maybewinner").text("Winner?")}, 8000);
 		});
   
 // document ready  
