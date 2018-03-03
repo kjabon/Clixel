@@ -51,11 +51,7 @@ $( "#support" ).click(function() {
         
         setTimeout(function(){
         	$("#maybewinner").prop("disabled", false); $("#maybewinner").text("Winner?")}, 8000);
-
-        	//$("#maybewinner").text("Winner? 2"), 4000;
-			//$("#maybewinner").prop("disabled", false)}, 6000;
-			
-			//$("#maybewinner").prop("disabled", false); $("#maybewinner").text("Winner?")}, 8000);
+        
 		});
   
 // document ready  
