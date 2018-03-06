@@ -68,12 +68,11 @@ var l_xcurs_random=Math.floor(Math.random() * 1000) + 1;
 var l_ycurs_random=Math.floor(Math.random() * 1000) + 1;
 
 function randomCompare(){
-
-		if (l_xcurs == l_xcurs_random && l_ycurs == l_ycurs_random) {
+		if ($xxx == l_xcurs_random && $yyy == l_ycurs_random) {
 			alert('You win! Congratulations!')
 		}
 		else {
-			alert("I'm sorry, but you chose (" + l_xcurs + "," + l_ycurs + ") and the winning pixel was (" + l_xcurs_random + "," + l_ycurs_random + ").\nYou were " + Math.round(Math.sqrt((Math.pow(l_xcurs - l_xcurs_random, 2) + Math.pow(l_ycurs - l_ycurs_random, 2)))) + " pixels away from the winning pixel.");
+			alert("I'm sorry, but you chose (" + $xxx + "," + $yyy + ") and the winning pixel was (" + l_xcurs_random + "," + l_ycurs_random + ").\nYou were " + Math.round(Math.sqrt((Math.pow($xxx - l_xcurs_random, 2) + Math.pow($yyy - l_ycurs_random, 2)))) + " pixels away from the winning pixel.");
 			location.reload();
 		}
 } //compares the randomly selected number to the one the participant chose//
