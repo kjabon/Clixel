@@ -3,20 +3,12 @@ $(document).ready(function() {
 // Gets the video src from the data-src on each button
 
 var $videoSrc;
-//var $l_xcurs;
-//var $l_ycurs;
-//var $xcurs = 0;
-//var $ycurs = 0;
-//var $headerHeight = 44; 
-//var $lhs = parseInt(this.offsetWidth)
-//var $lhs = (document.body.offsetWidth-1000)/2;
+
 $('.video-btn').click(function() {
     $videoSrc = $(this).data( "src" );
     $xxx = event.pageX;
 	$yyy = event.pageY;
     alert($xxx + ' , ' + $yyy);
-    //$l_xcurs = Math.ceil((xcurs - lhs))+1; //Changes search width for ad board//
-	//$l_ycurs = Math.ceil((ycurs - headerHeight)); 
 });
 console.log($videoSrc);
 
