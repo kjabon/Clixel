@@ -68,11 +68,11 @@ var l_xcurs_random=Math.floor(Math.random() * 1000) + 1;
 var l_ycurs_random=Math.floor(Math.random() * 1000) + 1;
 
 function randomCompare(){
-		if ($xxx == l_xcurs_random && $yyy == l_ycurs_random) {
+		if (l_xcurs == l_xcurs_random && l_ycurs == l_ycurs_random) {
 			alert('You win! Congratulations!')
 		}
 		else {
-			alert("I'm sorry, but you chose (" + $xxx + "," + $yyy + ") and the winning pixel was (" + l_xcurs_random + "," + l_ycurs_random + ").\nYou were " + Math.round(Math.sqrt((Math.pow($xxx - l_xcurs_random, 2) + Math.pow($yyy - l_ycurs_random, 2)))) + " pixels away from the winning pixel.");
+			alert("I'm sorry, but you chose (" + l_xcurs + "," + l_ycurs + ") and the winning pixel was (" + l_xcurs_random + "," + l_ycurs_random + ").\nYou were " + Math.round(Math.sqrt((Math.pow(l_xcurs - l_xcurs_random, 2) + Math.pow(l_ycurs - l_ycurs_random, 2)))) + " pixels away from the winning pixel.");
 			location.reload();
 		}
 } //compares the randomly selected number to the one the participant chose//
@@ -100,25 +100,26 @@ function mtrack(e) {
 	var xcurs = 0;
 	var ycurs = 0;
 
+if ($carry == false){ //boolean found in modal.js
 	if (navigator.appName == 'Netscape'){
-		xcurs = e.pageX;
-		ycurs = e.pageY;
+		$xxx = event.pageX;
+		$yyy = event.pageY;
 //		showMode = false;
-	} else {
-		xcurs = event.clientX; //clientX supposedly gets the coordinates of the page//
-		ycurs = event.clientY; //clientY supposedly gets the coordinates of the page//
+}
+	 else {
+		$xxx = event.clientX; //clientX supposedly gets the coordinates of the page//
+		$yyy = event.clientY; //clientY supposedly gets the coordinates of the page//
 	}
-
 	if (navigator.appName == 'Netscape') {
-		document.getElementById('d').style.left=xcurs + 11; //Changes ad hover display box start//
-		document.getElementById('d').style.top=ycurs;
-		l_xcurs = Math.ceil((xcurs - lhs))+1; //Changes search width for ad board//
-		l_ycurs = Math.ceil((ycurs - headerHeight)); //Changes search height for ad board//
+		document.getElementById('d').style.left=$xxx + 11; //Changes ad hover display box start//
+		document.getElementById('d').style.top=$yyy;
+		l_xcurs = Math.ceil(($xxx - lhs))+1; //Changes search width for ad board//
+		l_ycurs = Math.ceil(($yyy - headerHeight)); //Changes search height for ad board//
 	} else {
-		l_xcurs = Math.ceil((xcurs - lhs)/10) + 1;
-		l_ycurs = Math.ceil((ycurs - headerHeight + document.body.scrollTop)/10);
-		document.getElementById('d').style.top=ycurs + document.body.scrollTop - 5;
-		document.getElementById('d').style.left=xcurs + 14 + document.body.scrollLeft;
+		l_xcurs = Math.ceil(($xxx - lhs)/10) + 1;
+		l_ycurs = Math.ceil(($yyy - headerHeight + document.body.scrollTop)/10);
+		document.getElementById('d').style.top=$yyy + document.body.scrollTop - 5;
+		document.getElementById('d').style.left=$xxx + 14 + document.body.scrollLeft;
 	}
 
 	if ((l_ycurs <= 0) || (l_ycurs > 1000) || (l_xcurs <= 0) || (l_xcurs > 1000)){ //Used for hover info panel on empty pixels//
@@ -139,6 +140,41 @@ function mtrack(e) {
 			}//The previous 6 lines are for writing either the title, which contains the mouseover box's coordinates already, or the current location.
 		}
 	}
+}
+else {
+
+if (navigator.appName == 'Netscape') {
+		document.getElementById('d').style.left=$xxx + 11; //Changes ad hover display box start//
+		document.getElementById('d').style.top=$yyy;
+		l_xcurs = Math.ceil(($xxx - lhs))+1; //Changes search width for ad board//
+		l_ycurs = Math.ceil(($yyy - headerHeight)); //Changes search height for ad board//
+	} else {
+		l_xcurs = Math.ceil(($xxx - lhs)/10) + 1;
+		l_ycurs = Math.ceil(($yyy - headerHeight + document.body.scrollTop)/10);
+		document.getElementById('d').style.top=$yyy + document.body.scrollTop - 5;
+		document.getElementById('d').style.left=$xxx + 14 + document.body.scrollLeft;
+	}
+
+	if ((l_ycurs <= 0) || (l_ycurs > 1000) || (l_xcurs <= 0) || (l_xcurs > 1000)){ //Used for hover info panel on empty pixels//
+		document.getElementById('d').style.display = "none";
+	} else {
+		document.getElementById('d').style.display = "";
+		if (showMode) {
+			document.getElementById('xcoord').innerHTML = "(" + l_xcurs + ",";
+			document.getElementById('ycoord').innerHTML = l_ycurs + ")";
+		} else {
+			if (sTitle == "") {
+				document.getElementById('xcoord').innerHTML = "Purchase these pixels using the link above!"; //Used for pixels with no ads
+					document.getElementById('xcoord').innerHTML += " (" + l_xcurs + ",";
+					document.getElementById('ycoord').innerHTML = l_ycurs + ")";
+			} else {	
+				document.getElementById('xcoord').innerHTML = sTitle + " " + "(" + l_xcurs + "," + l_ycurs + ")"; //Changed to display coord also//
+				document.getElementById('ycoord').innerHTML = "";
+			}//The previous 6 lines are for writing either the title, which contains the mouseover box's coordinates already, or the current location.
+		}
+	}
+
+}
 
 	if (!bZ) {
 		return;

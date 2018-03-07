@@ -3,12 +3,20 @@ $(document).ready(function() {
 // Gets the video src from the data-src on each button
 
 var $videoSrc;
+$carry = false; //executes different code in gsc3.js depending on boolean status
 
 $('.video-btn').click(function() {
     $videoSrc = $(this).data( "src" );
-    $xxx = event.pageX;
-	$yyy = event.pageY;
-    alert($xxx + ' , ' + $yyy);
+		if (navigator.appName == 'Netscape'){
+		$xxx = event.pageX;
+		$yyy = event.pageY;
+		$carry = true;
+//		showMode = false;
+	} else {
+		$xxx = event.clientX; //clientX supposedly gets the coordinates of the page//
+		$yyy = event.clientY; //clientY supposedly gets the coordinates of the page//
+		$carry = true;
+	}
 });
 console.log($videoSrc);
 
