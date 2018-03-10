@@ -43,7 +43,7 @@
 			"file": "/Users/kenny/Documents/GitHub/Clixel/clickash.html",
 			"settings":
 			{
-				"buffer_size": 7284,
+				"buffer_size": 7388,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -52,7 +52,7 @@
 			"file": "style.css",
 			"settings":
 			{
-				"buffer_size": 3131,
+				"buffer_size": 3178,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -61,7 +61,7 @@
 			"file": "gsc3.js",
 			"settings":
 			{
-				"buffer_size": 4751,
+				"buffer_size": 4726,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -205,7 +205,7 @@
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 37.0
 	},
 	"find_in_files":
 	{
@@ -219,6 +219,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"banner",
+			"clixel",
+			"homepage",
 			"1333",
 			"innerHTML",
 			"1000",
@@ -269,15 +272,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7284,
+						"buffer_size": 7388,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								741,
-								741
+								771,
+								771
 							]
 						],
 						"settings":
@@ -286,7 +289,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 63.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -298,15 +301,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3131,
+						"buffer_size": 3178,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								659,
-								660
+								0,
+								0
 							]
 						],
 						"settings":
@@ -327,15 +330,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4751,
+						"buffer_size": 4726,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1605,
-								1609
+								0,
+								0
 							]
 						],
 						"settings":
@@ -344,7 +347,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 769.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
