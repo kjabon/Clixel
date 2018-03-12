@@ -131,7 +131,7 @@ if ($carry == false){ //boolean found in modal.js
 			document.getElementById('ycoord').innerHTML = l_ycurs + ")";
 		} else {
 			if (sTitle == "") {
-				document.getElementById('xcoord').innerHTML = "Purchase these pixels using the link above!"; //Used for pixels with no ads
+				document.getElementById('xcoord').innerHTML = "Something went wrong! This space shouldn't be here!"; //Used for pixels with no ads
 					document.getElementById('xcoord').innerHTML += " (" + l_xcurs + ",";
 					document.getElementById('ycoord').innerHTML = l_ycurs + ")";
 			} else {	
