@@ -39,7 +39,7 @@ $('#myModal').on('hide.bs.modal', function (e) {
 
 
 // Have random compare "winner" button appear after time//
-	$( "#support" ).click(function() {
+	$( ".video-btn" ).click(function() {
 	$("#maybewinner").prop("disabled", true);
        	
        	setTimeout(function(){
@@ -59,7 +59,7 @@ $('#myModal').on('hide.bs.modal', function (e) {
         
         setTimeout(function(){
         	$("#maybewinner").text("Wait 2")}, 6000);
-        
+
         setTimeout(function(){
         	$("#maybewinner").text("Wait 1")}, 7000);
         
