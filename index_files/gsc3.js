@@ -69,6 +69,18 @@ var l_ycurs_random=Math.floor(Math.random() * 1000) + 1;
 
 function randomCompare(){
 	
+		if (l_xcurs > 1000){
+			l_xcurs = 1000
+		}
+		if (l_xcurs < 1){
+			l_xcurs = 1
+		}
+		if (l_ycurs > 1000 ){
+			l_ycurs = 1000
+		}
+		if (l_ycurs < 1){
+			l_ycurs = 1
+		}
 		if (l_xcurs == l_xcurs_random && l_ycurs == l_ycurs_random) {
 			alert('You win! Congratulations!')
 		}
@@ -114,9 +126,10 @@ if ($carry == false){ //boolean found in modal.js
 	if (navigator.appName == 'Netscape') {
 		document.getElementById('d').style.left=$xxx + 11; //Changes ad hover display box start//
 		document.getElementById('d').style.top=$yyy;
-		l_xcurs = Math.ceil(($xxx - lhs)) + 1; //Changes search width for ad board, used to be +1//
+		l_xcurs = Math.ceil(($xxx - lhs)) + 1; //Changes search width for ad board//
 		l_ycurs = Math.ceil(($yyy - headerHeight)); //Changes search height for ad board//
-	} else {
+		
+	}	else {
 		l_xcurs = Math.ceil(($xxx - lhs)/10) + 1;
 		l_ycurs = Math.ceil(($yyy - headerHeight + document.body.scrollTop)/10);
 		document.getElementById('d').style.top=$yyy + document.body.scrollTop - 5;
@@ -138,7 +151,7 @@ if ($carry == false){ //boolean found in modal.js
 			} else {	
 				document.getElementById('xcoord').innerHTML = sTitle + " " + "(" + l_xcurs + "," + l_ycurs + ")"; //Changed to display coord also//
 				document.getElementById('ycoord').innerHTML = "";
-			}//The previous 6 lines are for writing either the title, which contains the mouseover box's coordinates already, or the current location.
+			}
 		}
 	}
 }
@@ -149,6 +162,7 @@ if (navigator.appName == 'Netscape') {
 		document.getElementById('d').style.top=$yyy;
 		l_xcurs = Math.ceil(($xxx - lhs)) + 1; //Changes search width for ad board//
 		l_ycurs = Math.ceil(($yyy - headerHeight)); //Changes search height for ad board//
+
 	} else {
 		l_xcurs = Math.ceil(($xxx - lhs)/10) + 1;
 		l_ycurs = Math.ceil(($yyy - headerHeight + document.body.scrollTop)/10);
@@ -171,7 +185,7 @@ if (navigator.appName == 'Netscape') {
 			} else {	
 				document.getElementById('xcoord').innerHTML = sTitle + " " + "(" + l_xcurs + "," + l_ycurs + ")"; //Changed to display coord also//
 				document.getElementById('ycoord').innerHTML = "";
-			}//The previous 6 lines are for writing either the title, which contains the mouseover box's coordinates already, or the current location.
+			}
 		}
 	}
 
