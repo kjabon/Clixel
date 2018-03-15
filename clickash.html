@@ -4,18 +4,6 @@
 
 <! Header stuff
 
-Line 22 of mdh: top bar w/ logo and description
-Line 41 of mdh: table to contain links like home, twitter, etc.
-Line 57 of mdh: script for mouseover text, gsc3.js
-Line 58 of mdh: ?? StatCounter, but not sure what it's counting. Look into this file (counter.js)
-69-73: partial setup of pixel map. uses "map". Look into this type in html
-	Not sure what line 70 does?
-	TODO: figure out line 74 mechanics
-No idea what line 3394 does
-
-Todo:
-Make seperate pages work, write out a description for the seperate pages
-
 Login widget - need api tutorial
 Make random pixel generator - use random api
 Scripts for adding new images
@@ -25,17 +13,13 @@ AMOE
 Auction
 google.com/webdesigner
 
-
-Random button logic: they pick a location, it gets sent to the servers which generates a location with javascript (use random x and random y), which sends back a dynamically (instead of static) generate html displaying location and if they won
 Images: take image advertises gives, take xy coordinate, paste it on (4 loop- rgb value of this pixel is rgb value of)
 Login widget from facebook/google
 CAPTCHA
-AMOE: Use 1/million random number generator and compare to 1 (true random number generator) or how to make it as random as possible
 
 Soon:
-Get rid of alt text on ad hover
 Make AMOE wait?
-Change wait text to "Find out if you won in (s)"
+Create second page for winning (with accessable link on page) and think about odds
 Make so people can't mute YouTube
 Change banner name
 Add copyright info
@@ -45,6 +29,10 @@ Change meta info
 More resources:
 Make true random
 Hake ad box fit better for multiple screen sizes
+Image with ads
+Make login widgets work
+CAPTCHA every x time
+
 >
 
 
@@ -151,7 +139,7 @@ Hake ad box fit better for multiple screen sizes
 <div class="embed-responsive embed-responsive-16by9">
   <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always">></iframe>
 </div>
-<button type="button" id="maybewinner" onclick="randomCompare()">Wait 8</button>
+<button type="button" id="maybewinner" onclick="randomCompare()">Discover if you've won in 8</button>
         
         
       </div>

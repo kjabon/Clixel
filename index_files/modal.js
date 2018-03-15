@@ -5,6 +5,21 @@ $(document).ready(function() {
 var $videoSrc;
 $carry = false; //executes different code in gsc3.js depending on boolean status
 
+        $('.video-btn')
+        	.mouseenter(function() {	
+        		var title = $(this).attr("title");
+        		$(this).attr("tmp_title", title);
+        		$(this).attr("title","");
+        	})
+        	.mouseleave(function() {
+        		var title = $(this).attr("tmp_title");
+        		$(this).attr("title", title);
+        	})
+        	.click(function() {	
+        		var title = $(this).attr("tmp_title");
+        		$(this).attr("title", title);
+        	}); //previous 13 lines hide secondary title popup on ad board
+
 $('.video-btn').click(function() {
     $videoSrc = $(this).data( "src" );
 		if (navigator.appName == 'Netscape'){
@@ -43,28 +58,28 @@ $('#myModal').on('hide.bs.modal', function (e) {
 	$("#maybewinner").prop("disabled", true);
        	
        	setTimeout(function(){
-        	$("#maybewinner").text("Wait 7")}, 1000);
+        	$("#maybewinner").text("Discover if you've won in 7")}, 1000);
         
         setTimeout(function(){
-        	$("#maybewinner").text("Wait 6")}, 2000);
+        	$("#maybewinner").text("Discover if you've won in 6")}, 2000);
      	
      	setTimeout(function(){
-        	$("#maybewinner").text("Wait 5")}, 3000);
+        	$("#maybewinner").text("Discover if you've won in 5")}, 3000);
      	
      	setTimeout(function(){
-        	$("#maybewinner").text("Wait 4")}, 4000);
+        	$("#maybewinner").text("Discover if you've won in 4")}, 4000);
         
         setTimeout(function(){
-        	$("#maybewinner").text("Wait 3")}, 5000);
+        	$("#maybewinner").text("Discover if you've won in 3")}, 5000);
         
         setTimeout(function(){
-        	$("#maybewinner").text("Wait 2")}, 6000);
+        	$("#maybewinner").text("Discover if you've won in 2")}, 6000);
 
         setTimeout(function(){
-        	$("#maybewinner").text("Wait 1")}, 7000);
+        	$("#maybewinner").text("Discover if you've won in 1")}, 7000);
         
         setTimeout(function(){
-        	$("#maybewinner").prop("disabled", false); $("#maybewinner").text("Winner?")}, 8000);
+        	$("#maybewinner").prop("disabled", false); $("#maybewinner").text("Click here to discover if you've won")}, 8000);
 		});
 // document ready  
 });
