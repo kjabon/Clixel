@@ -81,5 +81,10 @@ $('#myModal').on('hide.bs.modal', function (e) {
         setTimeout(function(){
         	$("#maybewinner").prop("disabled", false); $("#maybewinner").text("Click here to discover if you've won")}, 8000);
 		});
+
+$('#amoeModal').on('shown.bs.modal', function (e) {
+    
+$("p").text("Hello world!");
+}) //trying to create modal with another button
 // document ready  
 });
