@@ -95,13 +95,40 @@ var l_ycurs_faux=Math.floor(Math.random() * 1000) + 1;
 
 function amoeButton(){
 
-	if (l_xcurs_faux == l_xcurs_random && l_ycurs_faux == l_ycurs_random) {
+	document.getElementById("amoebtn").disabled = true;
+	
+    setTimeout(function(){
+        document.getElementById("amoebtn").value = "Discover if you've won in 8"}, 0);
+	
+	setTimeout(function(){
+        document.getElementById("amoebtn").value = "Discover if you've won in 7"}, 1000);
+	
+	setTimeout(function(){
+        document.getElementById("amoebtn").value = "Discover if you've won in 6"}, 2000);
+	
+	setTimeout(function(){
+        document.getElementById("amoebtn").value = "Discover if you've won in 5"}, 3000);
+	
+	setTimeout(function(){
+        document.getElementById("amoebtn").value = "Discover if you've won in 4"}, 4000);
+	
+	setTimeout(function(){
+        document.getElementById("amoebtn").value = "Discover if you've won in 3"}, 5000);
+	
+	setTimeout(function(){
+        document.getElementById("amoebtn").value = "Discover if you've won in 2"}, 6000);
+	
+	setTimeout(function(){
+        document.getElementById("amoebtn").value = "Discover if you've won in 1"}, 7000);
+
+	setTimeout(function(){
+		if (l_xcurs_faux == l_xcurs_random && l_ycurs_faux == l_ycurs_random) {
 		alert('You win! Congratulations!');
 	}
 	else{
 		alert("I'm sorry, but you chose (" + l_xcurs_faux + "," + l_ycurs_faux + ") and the winning pixel was (" + l_xcurs_random + "," + l_ycurs_random + ").\nYou were " + Math.round(Math.sqrt((Math.pow(l_xcurs_faux - l_xcurs_random, 2) + Math.pow(l_ycurs_faux - l_ycurs_random, 2)))) + " pixels away from the winning pixel.")
 		location.reload()
-	}
+	}}, 8000);
 }
 
 if (document.all){}
