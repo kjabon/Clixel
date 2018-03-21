@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-    <!--Google jquery CDN-->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <!--Google jquery CDN-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -97,13 +99,16 @@ body {font-size:16px;}
       </div>
     </div>
   </div>
-  
+
 <!-- AMOE-->
   <div class="w3-container" id="amoe" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-red"><b>AMOE (Alternate Method of Entry)</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
     <p>We offer an alternate method of entry for participants to use. AMOE is a service that allows the user the chance to win without supporting our sponsors.</p>
-    <input id="amoebtn" type="button" value="AMOE" onclick="amoeButton();" />
+
+    <input type="button" class="btn video-btn" value="AMOE" data-toggle="modal" data-src="https://www.youtube.com/embed/oT6Xd5QsBOE" data-target="#myModal">
+
+    <!-- <input id="amoebtn" type="button" value="AMOE" onclick="amoeButton();" /> -->
   </div>
 
     <!-- The Auction House-->
@@ -161,7 +166,28 @@ function onClick(element) {
   captionText.innerHTML = element.alt;
 }
 </script>
-
 </body>
 </html>
 
+   <!-- Modal -->
+<div class="modal fade" id="myModal" tableindex="1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      
+      <div class="modal-body">
+
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+        <!-- 16:9 aspect ratio -->
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always">></iframe>
+</div>
+<button type="button" id="maybewinner" onclick="randomCompare()">Discover if you've won in 8</button>
+        
+        
+      </div>
+
+    </div>
+  </div>
+</div> 
