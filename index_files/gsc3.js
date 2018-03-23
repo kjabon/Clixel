@@ -47,6 +47,17 @@ function da() {
 	bH = false;
 }
 
+function amoeContinue(){
+	document.getElementById("amoebtncontinue").style.display="none";
+	document.getElementById("amoebtnclose").style.display="none";
+	document.getElementById("textbeforeamoe").style.display="block";
+	document.getElementById("amoebtn").style.display="block";
+}
+
+function amoeClose(){
+	location.reload();
+}
+
 //start popup window code//
 
 var popupWindow = null;

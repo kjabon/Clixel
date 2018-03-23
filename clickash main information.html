@@ -104,9 +104,9 @@ body {font-size:16px;}
   <div class="w3-container" id="amoe" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-red"><b>AMOE (Alternate Method of Entry)</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p>We offer an alternate method of entry for participants to use. AMOE is a service that allows the user the chance to win without supporting our sponsors.</p>
+    <p>We offer an alternate method of entry for participants to use. AMOE is a service that allows the user the chance to win without supporting our sponsors. Click the button below for more information.</p>
 
-    <input type="button" class="moreinfo" value="AMOE" data-toggle="modal" data-target="#myModal">
+    <input type="button" class="moreinfo" value="More info" data-toggle="modal" data-target="#myModal">
     
   </div>
 
@@ -169,23 +169,26 @@ function onClick(element) {
 </html>
 
    <!-- Modal -->
-<div class="modal fade" id="myModal" tableindex="1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
+  <div class="modal fade" id="myModal" tableindex="1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
       
-      <div class="modal-body">
+        <div class="modal-body">
 
-       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">×</span>
-        </button>
-        <!-- 16:9 aspect ratio -->
-<div class="embed-responsive embed-responsive-16by9">
-  <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always">></iframe>
-</div>
-<input type="button" id="amoebtn" value="Click here!" onclick="amoeButton();" />
-        
-        
-      </div>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+          *Placeholder test for more information about AMOE and/or legal information*<br/>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<br/>
+          <br/>
+          <input type="button" id="amoebtncontinue" value="Click here if you accept the terms of use" onclick="amoeContinue();" />
+          <input type="button" id="amoebtnclose" value="Click here if you decline the terms of use" onclick="amoeClose();" />
+          <div id="textbeforeamoe" style="display: none;">Great! Now just...</div>
+          <input type="button" id="amoebtn" style="display: none;" value="Click here!" onclick="amoeButton();" />
+        </div>
+
+
+      </div> 
 
     </div>
   </div>
