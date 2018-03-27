@@ -80,7 +80,7 @@
 .loginBtn--google:hover,
 .loginBtn--google:focus {
   background: #E74B37;
-}                                   /*login buttons*/
+}/*login buttons*/
 
 	#pageads {             	
 		vertical-align: top;
@@ -102,7 +102,7 @@
 		text-align: center;
 		}
 
-	#note { /* used for very bottom bar */
+	#note { /* used for copyright bar at very bottom */
 		color: #999999;
 		font-family: trebuchet ms, arial, helvetica;
             	font-size: 8pt; 
