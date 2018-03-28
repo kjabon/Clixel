@@ -80,7 +80,8 @@
 .loginBtn--google:hover,
 .loginBtn--google:focus {
   background: #E74B37;
-}/*login buttons*/
+}
+/*Buttons ending*/
 
 	#pageads {             	
 		vertical-align: top;
@@ -94,7 +95,7 @@
 		position: relative;	
 		top:0;
 		left:0;
-		width:1000; /*WAS CHANGED TO AUTO - WHY?*/
+		width:1000;
 		height:1000;
 		border:0;
 		margin-left: auto; 
@@ -102,8 +103,8 @@
 		text-align: center;
 		}
 
-	#note { /* used for copyright bar at very bottom */
-		color: #999999;
+	#copyright { /* used for copyright bar at very bottom */
+		color: #000000;
 		font-family: trebuchet ms, arial, helvetica;
             	font-size: 8pt; 
 		background:#646464;
@@ -127,7 +128,7 @@
 		height: 1px;
 		}
 
-	#tablebreak {
+	#tablebreak { /* does not currently exist */
 		background:#646464;
 		}
 
