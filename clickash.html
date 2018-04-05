@@ -106,7 +106,7 @@ CAPTCHA every x time
 <center>
 <table>
 
-<tr><td id="copyright" height="18" width=1000px>Clixel © 2018 Jason Eaton and Kenny Jabon. All rights reserved. We am not responsible for the content of linked websites. All sponsor content is © of its respective owner(s).</td></tr>
+<tr><td id="copyright" height="18" width=1000px>Clixel © 2018 Jason Eaton and Kenny Jabon. All rights reserved. We are not responsible for the content of linked content. All sponsor content is © of the respective owner(s).</td></tr>
 
 </table>
 </center>
@@ -126,6 +126,32 @@ CAPTCHA every x time
 			<div class="embed-responsive embed-responsive-16by9">
   			<iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always">></iframe>
 			</div>
+
+			<!-- 'Winner?' button -->
+			<button type="button" id="maybewinner" onclick="randomCompare()">Discover if you've won in 8</button>
+
+			<!-- 'Winner' example button -->
+			<button type="button" id="winnerexample" onclick="winnerexample()">'Winner' example</button>
+
+			<!-- Winner button -->
+			<button type="button" id="winner" hidden="hidden" onclick="randomCompare()">Congratulations! You've won! Click here.</button>
+
+
+	  		</div>
+		</div>
+  	</div>
+</div>
+
+<!-- Winning Modal -->
+<div class="modal fade" id="mywinningModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  	<div class="modal-dialog" role="document">
+    	<div class="modal-content">
+      		<div class="modal-body">
+
+      		<!-- Modal exit button -->
+       		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          	<span aria-hidden="true">×</span>
+        	</button>
 
 			<!-- 'Winner?' button -->
 			<button type="button" id="maybewinner" onclick="randomCompare()">Discover if you've won in 8</button>

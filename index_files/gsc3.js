@@ -93,13 +93,30 @@ function randomCompare(){
 			l_ycurs = 1
 		}
 		if (l_xcurs == l_xcurs_random && l_ycurs == l_ycurs_random) {
-		alert("Congratulations! You won!")
+		alert("Congratulations! You've won!")
 		}
 		else {
 			alert("I'm sorry, but you chose (" + l_xcurs + "," + l_ycurs + ") and the winning pixel was (" + l_xcurs_random + "," + l_ycurs_random + ").\nYou were " + Math.round(Math.sqrt((Math.pow(l_xcurs - l_xcurs_random, 2) + Math.pow(l_ycurs - l_ycurs_random, 2)))) + " pixels away from the winning pixel.");
 			location.reload();
 		}
 } //compares the randomly selected number to the one the participant chose//
+
+function winnerexample(){
+
+		var node1 = document.getElementById("maybewinner");
+		var node2 = document.getElementById("winnerexample");
+		var a = document.createAttribute("hidden");
+		var b = document.createAttribute("hidden");
+		node1.setAttributeNode(a);
+		node2.setAttributeNode(b);
+
+		if (document.getElementById("winner").hasAttribute("hidden")) {
+			(document.getElementById("winner").removeAttribute("hidden"))
+		}
+		else{
+		}
+
+}
 
 var l_xcurs_faux=Math.floor(Math.random() * 1000) + 1;
 var l_ycurs_faux=Math.floor(Math.random() * 1000) + 1;
@@ -134,7 +151,7 @@ function amoeButton(){
 
 	setTimeout(function(){
 		if (l_xcurs_faux == l_xcurs_random && l_ycurs_faux == l_ycurs_random) {
-		alert('You win! Congratulations!');
+		alert("Congratulations! You've won!");
 	}
 	else{
 		alert("I'm sorry, but you chose (" + l_xcurs_faux + "," + l_ycurs_faux + ") and the winning pixel was (" + l_xcurs_random + "," + l_ycurs_random + ").\nYou were " + Math.round(Math.sqrt((Math.pow(l_xcurs_faux - l_xcurs_random, 2) + Math.pow(l_ycurs_faux - l_ycurs_random, 2)))) + " pixels away from the winning pixel.")
