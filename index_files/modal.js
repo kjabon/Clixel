@@ -45,8 +45,14 @@ else{
 $("#video").attr('src',$videoSrc + "?rel=0&showinfo=0&modestbranding=1&autoplay=1&controls=0" ); 
 }
 });
-  
-  
+
+// checks to see if 'winner' button was clicked //
+$("#winner").click(function(){
+
+   $(this).data('clicked', true)
+
+});
+
 // stop playing the youtube video when I close the modal
 $('#myModal').on('hide.bs.modal', function (e) {
 if ($('.moreinfo').length){
@@ -57,9 +63,14 @@ else{
     $("#video").attr('src',$videoSrc);
     $("#maybewinner").prop("disabled", true);
     $carry = false;
-    location.reload();
+    if ($("#winner").data("clicked")){
+    	alert("hello");
+   	}
+    else{
+    	location.reload();
+    	}
 	}
-})
+});
 
 
 // Have random compare "winner" button appear after time//
@@ -90,6 +101,7 @@ $(".video-btn").click(function() {
         
         setTimeout(function(){
         	$("#maybewinner").prop("disabled", false); $("#maybewinner").text("Click here to discover if you've won")}, 8000);
+        
 		});
 $('#amoeModal').on('shown.bs.modal', function (e) {
     
