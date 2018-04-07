@@ -120,9 +120,9 @@ function winnerexample(){
 
 function winnerbutton(){
 
-		var c = document.getElementById('myModal');
+		//var c = document.getElementById('myModal');
 
-		c.close();
+		//c.close();
 
 
 }

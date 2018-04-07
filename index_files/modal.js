@@ -38,7 +38,6 @@ console.log($videoSrc);
 // when the modal is opened autoplay it  
 $('#myModal').on('shown.bs.modal', function (e) {
 if ($('.moreinfo').length){
-
 }
 else{
 // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
@@ -64,7 +63,6 @@ else{
     $("#maybewinner").prop("disabled", true);
     $carry = false;
     if ($("#winner").data("clicked")){
-    	alert("hello");
    	}
     else{
     	location.reload();
