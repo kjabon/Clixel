@@ -118,15 +118,6 @@ function winnerexample(){
 
 }
 
-function winnerbutton(){
-
-		//var c = document.getElementById('myModal');
-
-		//c.close();
-
-
-}
-
 var l_xcurs_faux=Math.floor(Math.random() * 1000) + 1;
 var l_ycurs_faux=Math.floor(Math.random() * 1000) + 1;
 
