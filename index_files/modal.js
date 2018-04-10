@@ -94,6 +94,10 @@ else{
 	}
 });
 
+$('#winningModal').on('hide.bs.modal', function (e) {
+        return window.confirm("Are you sure you want to leave? To choose later, go to 'My Account' and click on 'My reward choice' at your convenience.")
+});
+
 
 // Have random compare "winner" button appear after time//
 $(".video-btn").click(function() {
