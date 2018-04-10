@@ -94,8 +94,15 @@ else{
 	}
 });
 
+// give warning when exiting winning modal
 $('#winningModal').on('hide.bs.modal', function (e) {
-        return window.confirm("Are you sure you want to leave? To choose later, go to 'My Account' and click on 'My reward choice' at your convenience.")
+
+        if (confirm("Are you sure you want to leave? To choose later, go to 'My Account' and click on 'My reward choice' at your convenience.")){
+        	window.location.reload()
+        }
+        else{
+        	return false
+        }
 });
 
 
