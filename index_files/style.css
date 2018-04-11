@@ -271,14 +271,50 @@
 		text-decoration: underline;
 		}
 
-	.line-in-middle {
-    width:400px;
+/* Changes format of winning modal */
+.winningmodal {
+  	width:400px;
     height:200px;
 	background: linear-gradient(to right, 
-	                            transparent 0%, 
+	                            transparent 100%,
 	                            transparent calc(50% - 0.81px), 
 	                            black calc(50% - 0.8px), 
 	                            black calc(50% + 0.8px), 
 	                            transparent calc(50% + 0.81px), 
 	                            transparent 100%); 
-	}
+}
+
+.winningtitle {
+	text-align: center;
+}
+
+/* Split the screen in half */
+.split {
+  height: 80%;
+  width: 50%;
+  position: absolute;
+  z-index: 1;
+  top: 20%;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+	top: 15%;
+  	left: 0;
+	padding-left: 20px;
+}
+
+.middle {
+	left: 0;
+	padding-left: 70px;
+	border-right: 3px solid black;
+}
+
+/* Control the right side */
+.right {
+	top: 15%;
+  	right: 0;
+  	padding-left: 20px;
+}
