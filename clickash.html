@@ -144,6 +144,8 @@ CAPTCHA every x time
   	</div>
 </div>
 
+
+
 <!-- Winning Modal -->
 <div class="modal fade" id="winningModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   	<div class="modal-dialog" role="document">
@@ -162,8 +164,8 @@ CAPTCHA every x time
         	<div class="winningmodal"></div>
 
         	<div class="split left">
-    		<h3>Take 10% of Total Reward</h3>
-    		<p>Some text.</p>
+    		<h3>Take 10% of Total Reward (That's $<script type="text/javascript"> document.write(tenpercent)</script>)</h3>
+    		<button type="button" id="10percent" style="margin-top:20px" z-index=1 onclick="fractionfunction()">I choose $<script type="text/javascript"> document.write(tenpercent)</script>!</button>
 			</div>
 
 			<div class="split middle">

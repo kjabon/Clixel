@@ -11,6 +11,7 @@
      ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
      SECTION 108(a)(3)).
 */
+var total = 1000;
 var bH = false;
 var bZ = false;
 var showMode = false;
@@ -116,6 +117,13 @@ function winnerexample(){
 		else{
 		}
 
+}
+
+var tenpercent = (total*.1);
+
+function fractionfunction(){
+	alert("The money will be credited to your account.");
+	window.location.reload();
 }
 
 var l_xcurs_faux=Math.floor(Math.random() * 1000) + 1;
