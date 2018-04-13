@@ -126,6 +126,19 @@ function fractionfunction(){
 	window.location.reload();
 }
 
+var oneintwentyvar=Math.floor(Math.random() * 20) + 1
+
+function oneintwenty(){
+	if (oneintwentyvar==6){
+		alert("Congratulations! The money will be credited to your account!");
+		window.location.reload();
+	}
+	else{
+		alert("I'm sorry, but you were not successful. Better luck next time.");
+		window.location.reload();
+	}
+}  
+
 var l_xcurs_faux=Math.floor(Math.random() * 1000) + 1;
 var l_ycurs_faux=Math.floor(Math.random() * 1000) + 1;
 

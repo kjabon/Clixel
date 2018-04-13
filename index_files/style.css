@@ -272,8 +272,7 @@
 		}
 
 /* Changes format of winning modal */
-.winningmodal {
-  	width:400px;
+.winningModal {
     height:200px;
 	background: linear-gradient(to right, 
 	                            transparent 100%,
@@ -282,6 +281,11 @@
 	                            black calc(50% + 0.8px), 
 	                            transparent calc(50% + 0.81px), 
 	                            transparent 100%); 
+}
+
+.winningmd{
+	width:1400px !important;
+	margin: auto;
 }
 
 .winningtitle {
