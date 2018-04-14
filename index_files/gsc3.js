@@ -11,7 +11,9 @@
      ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
      SECTION 108(a)(3)).
 */
-var total = 1000;
+var total = 1731.87;
+var totalwithcommas = total.toLocaleString();
+
 var bH = false;
 var bZ = false;
 var showMode = false;
@@ -119,7 +121,9 @@ function winnerexample(){
 
 }
 
-var tenpercent = (total*.1);
+// turns total into 10% and adds appropriate commas //
+var tenpercent = (total / 10);
+var tenpercentwithcommas = tenpercent.toLocaleString(undefined, {maximumFractionDigits:2})
 
 function fractionfunction(){
 	alert("The money will be credited to your account.");
@@ -134,7 +138,7 @@ function oneintwenty(){
 		window.location.reload();
 	}
 	else{
-		alert("I'm sorry, but you were not successful. Better luck next time.");
+		alert("I'm sorry, but you were not successful. The winning button was #");
 		window.location.reload();
 	}
 }  

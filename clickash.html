@@ -11,8 +11,8 @@ Scripts for adding new links //is this necessary?//
 Images: take image advertises gives, take xy coordinate, paste it on (4 loop- rgb value of this pixel is rgb value of)
 
 Soon:
-Make 'percent' var type able to handle a money amount from 'total'
-Desgin winning modal
+Don't round 10% number?
+Tell which number box was winner on winning modal
 Match winning timer to video
 Add winner button to AMOE button
 Change banner name
@@ -145,11 +145,9 @@ CAPTCHA every x time
   	</div>
 </div>
 
-
-
 <!-- Winning Modal -->
-<div class="modal fade winningmd" id="winningModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  	<div class="modal-dialog" role="document">
+<div class="modal fade" id="winningModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  	<div class="modal-dialog modal-lg" role="document">
     	<div class="modal-content">
       		<div class="modal-body">
 
@@ -164,16 +162,18 @@ CAPTCHA every x time
 
         	<div class="winningmodal"></div>
 
+        	<!-- Left side of winning modal -->
         	<div class="split left">
-    		<h3>Take 10% of Total Reward ($<script type="text/javascript"> document.write(tenpercent)</script>)</h3>
-    		<button type="button" id="10percent" style="margin-top:20px" z-index=1 onclick="fractionfunction()">I choose $<script type="text/javascript"> document.write(tenpercent)</script>!</button>
+    		<h3>10% of Total Reward <br>($<script type="text/javascript"> document.write(tenpercentwithcommas)</script>)</h3>
+    		<button type="button" id="10percent" style="margin-top:20px" z-index=1 onclick="fractionfunction()">I choose $<script type="text/javascript"> document.write(tenpercentwithcommas)</script>!</button>
 			</div>
 
 			<div class="split middle">
 			</div>
 
+			<!-- Right side of winning modal -->
 			<div class="split right">
-    		<h3>1 in 20 Chance of Total Reward ($<script type="text/javascript"> document.write(total)</script>)</h3>
+    		<h3>1 in 20 Chance of Total Reward ($<script type="text/javascript"> document.write(totalwithcommas)</script>)</h3>
     		<button type="button" id="10percent" style="margin-top:20px" z-index=1 onclick="oneintwenty()">1</button>
     		<button type="button" id="10percent" style="margin-top:20px" z-index=1 onclick="oneintwenty()">2</button>
     		<button type="button" id="10percent" style="margin-top:20px" z-index=1 onclick="oneintwenty()">3</button>
