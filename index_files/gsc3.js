@@ -130,15 +130,17 @@ function fractionfunction(){
 	window.location.reload();
 }
 
-var oneintwentyvar=Math.floor(Math.random() * 20) + 1
+var oneintwentyvar = document.getElementById("10percent"); 
+var oneintwentyvalue = oneintwentyvar.value;
+var oneintwentywinningvar = Math.floor(Math.random() * 20) + 1;
 
 function oneintwenty(){
-	if (oneintwentyvar==6){
+	if (oneintwentyvalue == oneintwentywinningvar){
 		alert("Congratulations! The money will be credited to your account!");
 		window.location.reload();
 	}
 	else{
-		alert("I'm sorry, but you were not successful. The winning button was #");
+		alert("I'm sorry, but you were not successful. The winning button was #" + oneintwentywinningvar + " and you chose" + oneintwentyvalue);
 		window.location.reload();
 	}
 }  
