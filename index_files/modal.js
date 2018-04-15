@@ -52,12 +52,19 @@ $("#winner").click(function(){
 
 });
 
-// Clicking the 'winner' button closes first modal and opens second
+// Clicking the 'winner' button closes first modal and opens second //
 $('.winnerFunction').click(function () {
     $("#myModal").modal('hide');
-    $('#myModal').empty();
+    $("#myModal").empty();
 	$("#winningModal").modal('show');
 });
+
+// Closes first modal and opens 'winning' modal //
+function realwinner() {
+    $("#myModal").modal('hide');
+    $("#myModal").empty();
+    $("#winningModal").modal('show');
+};
 
 // checks to see if 'winner' button was clicked //
 $("#winner").click(function(){
