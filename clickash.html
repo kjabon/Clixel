@@ -11,7 +11,7 @@ Scripts for adding new links //is this necessary?//
 Images: take image advertises gives, take xy coordinate, paste it on (4 loop- rgb value of this pixel is rgb value of)
 
 Soon:
-Tell which number box was winner on winning modal
+Connect picking correct pixel to the winning 'function' (it's a class now)
 Match winning timer to video
 Add winner button to AMOE button
 Change banner name
@@ -173,26 +173,26 @@ CAPTCHA every x time
 			<!-- Right side of winning modal -->
 			<div class="split right">
     		<h3>1 in 20 Chance of Total Reward ($<script type="text/javascript"> document.write(totalwithcommas)</script>)</h3>
-    		<button type="button" id="10percent" value="1" style="margin-top:20px" z-index=1 onclick="oneintwenty()">1</button>
-    		<button type="button" id="10percent" style="margin-top:20px" z-index=1 onclick="oneintwenty()">2</button>
-    		<button type="button" id="10percent" style="margin-top:20px" z-index=1 onclick="oneintwenty()">3</button>
-    		<button type="button" id="10percent" style="margin-top:20px" z-index=1 onclick="oneintwenty()">4</button>
-    		<button type="button" id="10percent" style="margin-top:20px" z-index=1 onclick="oneintwenty()">5</button>
-    		<button type="button" id="10percent" style="margin-top:20px" z-index=1 onclick="oneintwenty()">6</button>
-    		<button type="button" id="10percent" style="margin-top:20px" z-index=1 onclick="oneintwenty()">7</button>
-    		<button type="button" id="10percent" style="margin-top:20px" z-index=1 onclick="oneintwenty()">8</button>
-    		<button type="button" id="10percent" style="margin-top:20px" z-index=1 onclick="oneintwenty()">9</button>
-    		<button type="button" id="10percent" style="margin-top:20px" z-index=1 onclick="oneintwenty()">10</button>
-    		<button type="button" id="10percent" style="margin-top:20px" z-index=1 onclick="oneintwenty()">11</button>
-    		<button type="button" id="10percent" style="margin-top:20px" z-index=1 onclick="oneintwenty()">12</button>
-    		<button type="button" id="10percent" style="margin-top:20px" z-index=1 onclick="oneintwenty()">13</button>
-    		<button type="button" id="10percent" style="margin-top:20px" z-index=1 onclick="oneintwenty()">14</button>
-    		<button type="button" id="10percent" style="margin-top:20px" z-index=1 onclick="oneintwenty()">15</button>
-    		<button type="button" id="10percent" style="margin-top:20px" z-index=1 onclick="oneintwenty()">16</button>
-    		<button type="button" id="10percent" style="margin-top:20px" z-index=1 onclick="oneintwenty()">17</button>
-    		<button type="button" id="10percent" style="margin-top:20px" z-index=1 onclick="oneintwenty()">18</button>
-    		<button type="button" id="10percent" style="margin-top:20px" z-index=1 onclick="oneintwenty()">19</button>
-    		<button type="button" id="10percent" style="margin-top:20px" z-index=1 onclick="oneintwenty()">20</button>
+    		<button type="button" id="10percent" value="1" style="margin-top:20px" z-index=1 onclick="oneintwenty(this.value)">1</button>
+    		<button type="button" id="10percent" value="2" style="margin-top:20px" z-index=1 onclick="oneintwenty(this.value)">2</button>
+    		<button type="button" id="10percent" value="3" style="margin-top:20px" z-index=1 onclick="oneintwenty(this.value)">3</button>
+    		<button type="button" id="10percent" value="4" style="margin-top:20px" z-index=1 onclick="oneintwenty(this.value)">4</button>
+    		<button type="button" id="10percent" value="5" style="margin-top:20px" z-index=1 onclick="oneintwenty(this.value)">5</button>
+    		<button type="button" id="10percent" value="6" style="margin-top:20px" z-index=1 onclick="oneintwenty(this.value)">6</button>
+    		<button type="button" id="10percent" value="7" style="margin-top:20px" z-index=1 onclick="oneintwenty(this.value)">7</button>
+    		<button type="button" id="10percent" value="8" style="margin-top:20px" z-index=1 onclick="oneintwenty(this.value)">8</button>
+    		<button type="button" id="10percent" value="9" style="margin-top:20px" z-index=1 onclick="oneintwenty(this.value)">9</button>
+    		<button type="button" id="10percent" value="10" style="margin-top:20px" z-index=1 onclick="oneintwenty(this.value)">10</button>
+    		<button type="button" id="10percent" value="11" style="margin-top:20px" z-index=1 onclick="oneintwenty(this.value)">11</button>
+    		<button type="button" id="10percent" value="12" style="margin-top:20px" z-index=1 onclick="oneintwenty(this.value)">12</button>
+    		<button type="button" id="10percent" value="13" style="margin-top:20px" z-index=1 onclick="oneintwenty(this.value)">13</button>
+    		<button type="button" id="10percent" value="14" style="margin-top:20px" z-index=1 onclick="oneintwenty(this.value)">14</button>
+    		<button type="button" id="10percent" value="15" style="margin-top:20px" z-index=1 onclick="oneintwenty(this.value)">15</button>
+    		<button type="button" id="10percent" value="16" style="margin-top:20px" z-index=1 onclick="oneintwenty(this.value)">16</button>
+    		<button type="button" id="10percent" value="17" style="margin-top:20px" z-index=1 onclick="oneintwenty(this.value)">17</button>
+    		<button type="button" id="10percent" value="18" style="margin-top:20px" z-index=1 onclick="oneintwenty(this.value)">18</button>
+    		<button type="button" id="10percent" value="19" style="margin-top:20px" z-index=1 onclick="oneintwenty(this.value)">19</button>
+    		<button type="button" id="10percent" value="20" style="margin-top:20px" z-index=1 onclick="oneintwenty(this.value)">20</button>
 			</div>
 
 	  		</div>

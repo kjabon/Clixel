@@ -96,7 +96,7 @@ function randomCompare(){
 			l_ycurs = 1
 		}
 		if (l_xcurs == l_xcurs_random && l_ycurs == l_ycurs_random) {
-		alert("Congratulations! You've won!")
+		alert("You picked correctly but this still needs work. Sorry!")
 		}
 		else {
 			alert("I'm sorry, but you chose (" + l_xcurs + "," + l_ycurs + ") and the winning pixel was (" + l_xcurs_random + "," + l_ycurs_random + ").\nYou were " + Math.round(Math.sqrt((Math.pow(l_xcurs - l_xcurs_random, 2) + Math.pow(l_ycurs - l_ycurs_random, 2)))) + " pixels away from the winning pixel.");
@@ -130,17 +130,16 @@ function fractionfunction(){
 	window.location.reload();
 }
 
-var oneintwentyvar = document.getElementById("10percent"); 
-var oneintwentyvalue = oneintwentyvar.value;
 var oneintwentywinningvar = Math.floor(Math.random() * 20) + 1;
 
-function oneintwenty(){
-	if (oneintwentyvalue == oneintwentywinningvar){
-		alert("Congratulations! The money will be credited to your account!");
+function oneintwenty(value){
+	var oneintwentyvar = value;
+	if (oneintwentyvar == oneintwentywinningvar){
+		alert("You picked correctly! Congratulations! The money will be credited to your account!");
 		window.location.reload();
 	}
 	else{
-		alert("I'm sorry, but you were not successful. The winning button was #" + oneintwentywinningvar + " and you chose" + oneintwentyvalue);
+		alert("I'm sorry, but you chose " + oneintwentyvar + " and the winning button was " + oneintwentywinningvar + ".");
 		window.location.reload();
 	}
 }  
