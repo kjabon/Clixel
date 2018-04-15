@@ -95,8 +95,10 @@ function randomCompare(){
 		if (l_ycurs < 1){
 			l_ycurs = 1
 		}
-		if (l_xcurs == l_xcurs_random && l_ycurs == l_ycurs_random) {
-		alert("You picked correctly but this still needs work. Sorry!")
+		if (l_xcurs == l_xcurs && l_ycurs == l_ycurs) {
+    		document.getElementById("myModal").modal = "hide";
+    		document.getElementById("myModal").innerHTML = "";
+    		document.getElementById("winningModal").modal = "show";
 		}
 		else {
 			alert("I'm sorry, but you chose (" + l_xcurs + "," + l_ycurs + ") and the winning pixel was (" + l_xcurs_random + "," + l_ycurs_random + ").\nYou were " + Math.round(Math.sqrt((Math.pow(l_xcurs - l_xcurs_random, 2) + Math.pow(l_ycurs - l_ycurs_random, 2)))) + " pixels away from the winning pixel.");
