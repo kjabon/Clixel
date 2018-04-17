@@ -5,11 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" type="text/css" href="./index_files/AMOEwinningmodal.css">
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <!--Google jquery CDN-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -107,7 +106,7 @@ body {font-size:16px;}
     <hr style="width:50px;border:5px solid red" class="w3-round">
     <p>We offer an alternate method of entry for participants to use. AMOE is a service that allows the user the chance to win without supporting our sponsors. Click the button below for more information.</p>
 
-    <input type="button" class="moreinfo" value="More info" data-toggle="modal" data-target="#myModal">
+    <input type="button" class="moreinfo" value="More info" data-toggle="modal" data-target="#AMOEmodal">
     
   </div>
 
@@ -176,28 +175,87 @@ function onClick(element) {
 </body>
 </html>
 
-   <!-- Modal -->
-  <div class="modal fade" id="myModal" tableindex="1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
+<!-- AMOE Modal -->
+<div class="modal fade" id="AMOEmodal" tableindex="1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
       
-        <div class="modal-body">
+      <div class="modal-body">
 
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
-          *Placeholder text for more information about AMOE and/or legal information*<br/>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<br/>
-          <br/>
-          <input type="button" id="amoebtncontinue" value="Click here if you accept the terms of use" onclick="amoeContinue();" />
-          <input type="button" id="amoebtnclose" value="Click here if you decline the terms of use" onclick="amoeClose();" />
-          <div id="textbeforeamoe" style="display: none;">Great! Now just...</div>
-          <input type="button" id="amoebtn" style="display: none;" value="Click here to start the countdown!" onclick="amoeButton();" />
-        </div>
-
-
-      </div> 
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+        *Placeholder text for more information about AMOE and/or legal information*<br/>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<br/>
+        <br/>
+        <input type="button" id="amoebtncontinue" value="Click here if you accept the terms of use" onclick="amoeContinue();" />
+        <input type="button" id="amoebtnclose" value="Click here if you decline the terms of use" onclick="amoeClose();" />
+        <div id="textbeforeamoe" style="display: none;">Great! Now just...</div>
+        <input type="button" id="amoebtn" style="display: none;" value="Click here to start the countdown!" onclick="amoeButton();" />
+        
+      </div>
 
     </div>
   </div>
+</div>
+
+<!-- Winning Modal -->
+<div class="modal fade" id="winningModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+          <div class="modal-body">
+
+          <!-- Modal exit button -->
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+
+          <div class="winningtitle">
+          <h2>Choose One</h2>
+          </div>
+
+          <div class="winningmodal"></div>
+
+          <!-- Left side of winning modal -->
+          <div class="split left">
+        <h3>10% of Total Reward <br>($<script type="text/javascript"> document.write(tenpercentwithcommas)</script>)</h3>
+        <button type="button" id="10percent" style="margin-top:20px" z-index=1 onclick="fractionfunction()">I choose $<script type="text/javascript"> document.write(tenpercentwithcommas)</script>!</button>
+      </div>
+
+      <div class="split middle">
+      </div>
+
+      <!-- Right side of winning modal -->
+      <div class="split right">
+        <h3>1 in 20 Chance of Total Reward ($<script type="text/javascript"> document.write(totalwithcommas)</script>)</h3>
+        <button type="button" id="10percent" value="1" style="margin-top:20px" z-index=1 onclick="oneintwenty(this.value)">1</button>
+        <button type="button" id="10percent" value="2" style="margin-top:20px" z-index=1 onclick="oneintwenty(this.value)">2</button>
+        <button type="button" id="10percent" value="3" style="margin-top:20px" z-index=1 onclick="oneintwenty(this.value)">3</button>
+        <button type="button" id="10percent" value="4" style="margin-top:20px" z-index=1 onclick="oneintwenty(this.value)">4</button>
+        <button type="button" id="10percent" value="5" style="margin-top:20px" z-index=1 onclick="oneintwenty(this.value)">5</button>
+        <button type="button" id="10percent" value="6" style="margin-top:20px" z-index=1 onclick="oneintwenty(this.value)">6</button>
+        <button type="button" id="10percent" value="7" style="margin-top:20px" z-index=1 onclick="oneintwenty(this.value)">7</button>
+        <button type="button" id="10percent" value="8" style="margin-top:20px" z-index=1 onclick="oneintwenty(this.value)">8</button>
+        <button type="button" id="10percent" value="9" style="margin-top:20px" z-index=1 onclick="oneintwenty(this.value)">9</button>
+        <button type="button" id="10percent" value="10" style="margin-top:20px" z-index=1 onclick="oneintwenty(this.value)">10</button>
+        <button type="button" id="10percent" value="11" style="margin-top:20px" z-index=1 onclick="oneintwenty(this.value)">11</button>
+        <button type="button" id="10percent" value="12" style="margin-top:20px" z-index=1 onclick="oneintwenty(this.value)">12</button>
+        <button type="button" id="10percent" value="13" style="margin-top:20px" z-index=1 onclick="oneintwenty(this.value)">13</button>
+        <button type="button" id="10percent" value="14" style="margin-top:20px" z-index=1 onclick="oneintwenty(this.value)">14</button>
+        <button type="button" id="10percent" value="15" style="margin-top:20px" z-index=1 onclick="oneintwenty(this.value)">15</button>
+        <button type="button" id="10percent" value="16" style="margin-top:20px" z-index=1 onclick="oneintwenty(this.value)">16</button>
+        <button type="button" id="10percent" value="17" style="margin-top:20px" z-index=1 onclick="oneintwenty(this.value)">17</button>
+        <button type="button" id="10percent" value="18" style="margin-top:20px" z-index=1 onclick="oneintwenty(this.value)">18</button>
+        <button type="button" id="10percent" value="19" style="margin-top:20px" z-index=1 onclick="oneintwenty(this.value)">19</button>
+        <button type="button" id="10percent" value="20" style="margin-top:20px" z-index=1 onclick="oneintwenty(this.value)">20</button>
+      </div>
+
+        </div>
+    </div>
+    </div>
+</div>
+
+<!-- hidden button that gets pressed when AMOE modal wins -->
+<button type="button" id="winner" hidden="hidden" class="winnerFunction"></button>
+
 </div> 

@@ -177,8 +177,9 @@ function amoeButton(){
         document.getElementById("amoebtn").value = "Discover if you've won in 1"}, 7000);
 
 	setTimeout(function(){
-		if (l_xcurs_faux == l_xcurs_random && l_ycurs_faux == l_ycurs_random) {
-		alert("Congratulations! You've won!");
+		if (l_xcurs_faux == l_xcurs_faux && l_ycurs_faux == l_ycurs_faux) {
+		alert("Congratulations! A new window will now load.")
+		document.getElementById("winner").click();
 	}
 	else{
 		alert("I'm sorry, but you chose (" + l_xcurs_faux + "," + l_ycurs_faux + ") and the winning pixel was (" + l_xcurs_random + "," + l_ycurs_random + ").\nYou were " + Math.round(Math.sqrt((Math.pow(l_xcurs_faux - l_xcurs_random, 2) + Math.pow(l_ycurs_faux - l_ycurs_random, 2)))) + " pixels away from the winning pixel.")

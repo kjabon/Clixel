@@ -55,7 +55,9 @@ $("#winner").click(function(){
 // Clicking the 'winner' button closes first modal and opens second //
 $('.winnerFunction').click(function () {
     $("#myModal").modal('hide');
+    $("#AMOEmodal").modal('hide');
     $("#myModal").empty();
+    $("#AMOEmodal").empty();
 	$("#winningModal").modal('show');
 });
 
