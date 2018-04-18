@@ -104,6 +104,15 @@ $('#winningModal').on('hide.bs.modal', function (e) {
         }
 });
 
+// reloads AMOE modal when exiting unless "Congratulations" //
+$('#AMOEmodal').on('hide.bs.modal', function (e) {
+if ($("#winner").data("clicked")){
+   	}
+    else{
+    	window.location.reload();
+    	}
+});
+
 
 // Have random compare "winner" button appear after time//
 $(".video-btn").click(function() {
