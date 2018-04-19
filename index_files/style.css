@@ -267,10 +267,9 @@
 		text-decoration: underline;
 		}
 
-/* Changes dimensions of winning modal */
+/* Changes height of winning modal */
 .winningmodal {
 	height:200px;
-	width:1400px;
 }
 
 .winningtitle {
@@ -308,9 +307,4 @@
   	right: 0;
   	z-index: 2;
   	padding-left: 20px;
-}
-
-/* Currently changes width of winning modal */
-.modal-lg {
-    max-width: 36%;
 }
