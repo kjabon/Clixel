@@ -61,19 +61,6 @@ function amoeClose(){
 	location.reload();
 }
 
-//start popup window code//
-
-var popupWindow = null;
-function centeredPopup(url,winName,w,h,scroll){
-LeftPosition = (screen.width) ? (screen.width-w)/2 : 0;
-TopPosition = (screen.height) ? (screen.height-h)/2 : 0;
-settings =
-'height='+h+',width='+w+',top='+TopPosition+',left='+LeftPosition+',scrollbars='+scroll+',resizable'
-popupWindow = window.open(url,winName,settings)
-}
-
-//end popup window code//
-
 var headerHeight = 44; //Changes start (top) of ad board//
 
 var l_xcurs;
@@ -123,6 +110,7 @@ function winnerexample(){
 }
 
 // turns total into 10% and adds appropriate commas //
+
 var tenpercent = (total / 10);
 var tenpercentwithcommas = tenpercent.toLocaleString(undefined, {maximumFractionDigits:2})
 
