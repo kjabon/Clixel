@@ -128,12 +128,10 @@ function amoeButton(){
 	}}, 8000);
 }
 
-if (document.all){}
-else document.captureEvents(Event.MOUSEMOVE);
 document.onmousemove=mtrack;
 
 function mtrack(e) {
-	var lhs = (document.body.offsetWidth-1000)/2; //(used to be -1000) Changes where the search area starts for ad block. OffsetWidth supposedly display width of an area//
+	var lhs = (document.body.offsetWidth-1000)/2; //Changes where the search area starts for ad block. OffsetWidth supposedly display width of an area//
 	var xcurs = 0;
 	var ycurs = 0;
 
