@@ -138,15 +138,9 @@ function mtrack(e) {
 	var ycurs = 0;
 
 if ($carry == false){ //boolean found in modal.js
-	if (navigator.appName == 'Netscape'){
 		$xxx = event.pageX;
 		$yyy = event.pageY;
 //		showMode = false;
-}
-	 else {
-		$xxx = event.clientX; //clientX supposedly gets the coordinates of the page//
-		$yyy = event.clientY; //clientY supposedly gets the coordinates of the page//
-	}
 	if (navigator.appName == 'Netscape') {
 		document.getElementById('d').style.left=$xxx + 11; //Changes ad hover display box start//
 		document.getElementById('d').style.top=$yyy;
@@ -180,19 +174,10 @@ if ($carry == false){ //boolean found in modal.js
 	}
 }
 else {
-
-if (navigator.appName == 'Netscape') {
 		document.getElementById('d').style.left=$xxx + 11; //Changes ad hover display box start//
 		document.getElementById('d').style.top=$yyy;
 		l_xcurs = Math.ceil(($xxx - lhs)) + 1; //Changes search width for ad board//
 		l_ycurs = Math.ceil(($yyy - headerHeight)); //Changes search height for ad board//
-
-	} else {
-		l_xcurs = Math.ceil(($xxx - lhs)/10) + 1;
-		l_ycurs = Math.ceil(($yyy - headerHeight + document.body.scrollTop)/10);
-		document.getElementById('d').style.top=$yyy + document.body.scrollTop - 5;
-		document.getElementById('d').style.left=$xxx + 14 + document.body.scrollLeft;
-	}
 
 	if ((l_ycurs <= 0) || (l_ycurs > 1000) || (l_xcurs <= 0) || (l_xcurs > 1000)){ //Used for hover info panel on empty pixels//
 		document.getElementById('d').style.display = "none";
