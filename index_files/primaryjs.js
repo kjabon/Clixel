@@ -139,55 +139,31 @@ if ($carry == false){ //boolean found in modal.js
 		$xxx = event.pageX;
 		$yyy = event.pageY;
 		//showMode = false;//
-		document.getElementById('d').style.left=$xxx + 11; //Changes ad hover display box start//
-		document.getElementById('d').style.top=$yyy;
-		l_xcurs = Math.ceil(($xxx - lhs)) + 1; //Changes search width for ad board//
-		l_ycurs = Math.ceil(($yyy - headerHeight)); //Changes search height for ad board//
+}
+		
+document.getElementById('d').style.left=$xxx + 11; //Changes ad hover display box start//
+document.getElementById('d').style.top=$yyy;
+l_xcurs = Math.ceil(($xxx - lhs)) + 1; //Changes search width for ad board//
+l_ycurs = Math.ceil(($yyy - headerHeight)); //Changes search height for ad board//
 
-	if ((l_ycurs <= 0) || (l_ycurs > 1000) || (l_xcurs <= 0) || (l_xcurs > 1000)){ //Used for hover info panel on empty pixels//
-		document.getElementById('d').style.display = "none";
-	} else {
-		document.getElementById('d').style.display = "";
-		if (showMode) {
-			document.getElementById('xcoord').innerHTML = "(" + l_xcurs + ",";
-			document.getElementById('ycoord').innerHTML = l_ycurs + ")";
-		} else {
-			if (sTitle == "") {
-				document.getElementById('xcoord').innerHTML = ""; //Used for pixels with no ads
-					document.getElementById('xcoord').innerHTML += " (" + l_xcurs + ",";
-					document.getElementById('ycoord').innerHTML = l_ycurs + ")";
-			} else {	
-				document.getElementById('xcoord').innerHTML = sTitle + " " + "(" + l_xcurs + "," + l_ycurs + ")"; //Changed to display coord also//
-				document.getElementById('ycoord').innerHTML = "";
-			}
-		}
-	}
+if ((l_ycurs <= 0) || (l_ycurs > 1000) || (l_xcurs <= 0) || (l_xcurs > 1000)){ //Used for hover info panel on empty pixels//
+	document.getElementById('d').style.display = "none";
 }
 else {
-		document.getElementById('d').style.left=$xxx + 11; //Changes ad hover display box start//
-		document.getElementById('d').style.top=$yyy;
-		l_xcurs = Math.ceil(($xxx - lhs)) + 1; //Changes search width for ad board//
-		l_ycurs = Math.ceil(($yyy - headerHeight)); //Changes search height for ad board//
-
-	if ((l_ycurs <= 0) || (l_ycurs > 1000) || (l_xcurs <= 0) || (l_xcurs > 1000)){ //Used for hover info panel on empty pixels//
-		document.getElementById('d').style.display = "none";
+	document.getElementById('d').style.display = "";
+	if (showMode) {
+		document.getElementById('xcoord').innerHTML = "(" + l_xcurs + ",";
+		document.getElementById('ycoord').innerHTML = l_ycurs + ")";
 	} else {
-		document.getElementById('d').style.display = "";
-		if (showMode) {
-			document.getElementById('xcoord').innerHTML = "(" + l_xcurs + ",";
-			document.getElementById('ycoord').innerHTML = l_ycurs + ")";
-		} else {
-			if (sTitle == "") {
-				document.getElementById('xcoord').innerHTML = ""; //Used for pixels with no ads
-					document.getElementById('xcoord').innerHTML += " (" + l_xcurs + ",";
-					document.getElementById('ycoord').innerHTML = l_ycurs + ")";
-			} else {	
-				document.getElementById('xcoord').innerHTML = sTitle + " " + "(" + l_xcurs + "," + l_ycurs + ")"; //Changed to display coord also//
-				document.getElementById('ycoord').innerHTML = "";
-			}
+		if (sTitle == "") {
+			document.getElementById('xcoord').innerHTML = ""; //Used for pixels with no ads
+				document.getElementById('xcoord').innerHTML += " (" + l_xcurs + ",";
+				document.getElementById('ycoord').innerHTML = l_ycurs + ")";
+		} else {	
+			document.getElementById('xcoord').innerHTML = sTitle + " " + "(" + l_xcurs + "," + l_ycurs + ")"; //Changed to display coord also//
+			document.getElementById('ycoord').innerHTML = "";
 		}
 	}
-
 }
 
 }

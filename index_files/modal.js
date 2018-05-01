@@ -22,18 +22,11 @@ $carry = false; //executes different code in gsc3.js depending on boolean status
 
 $('.video-btn').click(function() {
     $videoSrc = $(this).data( "src" );
-		if (navigator.appName == 'Netscape'){
-		$xxx = event.pageX;
-		$yyy = event.pageY;
-		$carry = true;
-//		showMode = false;
-	} else {
-		$xxx = event.clientX; //clientX supposedly gets the coordinates of the page//
-		$yyy = event.clientY; //clientY supposedly gets the coordinates of the page//
-		$carry = true;
-	}
+	$xxx = event.pageX;
+	$yyy = event.pageY;
+	$carry = true;
+//	showMode = false;
 });
-console.log($videoSrc);
 
 // when the modal is opened autoplay it  
 $('#myModal').on('shown.bs.modal', function (e) {
