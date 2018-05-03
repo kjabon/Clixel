@@ -128,14 +128,14 @@ function amoeButton(){
 	}}, 8000);
 }
 
-document.onmousemove = mouseposition;
+document.onmousemove = mouseinfo;
 
 var sTitle="";
 function d(o) {
 sTitle = o.title;
 }
 
-function mouseposition() {
+function mouseinfo() {
 	
 	//WORK HERE DOWN//
 
