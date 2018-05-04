@@ -165,18 +165,8 @@ function mouseinfo() {
 	}
 	else {
 		document.getElementById('d').style.display = "";
-		if (showMode) {
-			document.getElementById('xcoord').innerHTML = "(" + l_xcurs + ",";
-			document.getElementById('ycoord').innerHTML = l_ycurs + ")";
-		} else {
-			if (sTitle == "") {
-				document.getElementById('xcoord').innerHTML = ""; //Used for pixels with no ads
-					document.getElementById('xcoord').innerHTML += " (" + l_xcurs + ",";
-					document.getElementById('ycoord').innerHTML = l_ycurs + ")";
-			} else {	
-				document.getElementById('xcoord').innerHTML = sTitle + " " + "(" + l_xcurs + "," + l_ycurs + ")"; //Changed to display coord also//
-				document.getElementById('ycoord').innerHTML = "";
-			}
-		}
+		document.getElementById('xcoord').innerHTML = sTitle + " " + "(" + l_xcurs + "," + l_ycurs + ")";
+		document.getElementById('ycoord').innerHTML = "";
+		
 	}
 }
