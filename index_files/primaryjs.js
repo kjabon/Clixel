@@ -139,7 +139,6 @@ function mouseinfo() {
 	
 	//WORK HERE DOWN//
 
-	var getbodywidth = document.body.getBoundingClientRect().width;
 	var lhs = (document.body.getBoundingClientRect().width)/2; //Changes where the search area starts for ad block. OffsetWidth supposedly display width of an area//
 	
 	//WORK HERE UP//
