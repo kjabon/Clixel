@@ -139,23 +139,28 @@ function mouseinfo() {
 	
 	//WORK HERE DOWN//
 
-	var lhs = (document.body.offsetWidth-1000)/2 //Changes where the search area starts for ad block. OffsetWidth supposedly display width of an area//
-	var xcurs = 0;
-	var ycurs = 0;
-
+	var getbodywidth = document.body.getBoundingClientRect().width;
+	var lhs = (document.body.getBoundingClientRect().width)/2; //Changes where the search area starts for ad block. OffsetWidth supposedly display width of an area//
+	
 	//WORK HERE UP//
 
 	if ($carry == false){ //boolean found in modal.js
 			$xxx = event.pageX;
 			$yyy = event.pageY;
-			//showMode = false//
 	}
 	
 	//WORK HERE DOWN//
 
-	document.getElementById('d').style.left=$xxx + 10; //Changes ad hover display box start//
+	document.getElementById('d').style.left=$xxx + 10; //Changes mouse hover display box start////
 	document.getElementById('d').style.top=$yyy + 18;
-	l_xcurs = Math.ceil(($xxx - lhs)) + 1; //Changes search width for ad board//
+
+	if (((lhs % 1) * 10) < 5) {
+		l_xcurs = Math.ceil(($xxx - lhs + 500)) + 1;
+	}
+	else {
+		l_xcurs = Math.floor(($xxx - lhs + 500)) + 1;
+	}
+	
 	l_ycurs = Math.ceil(($yyy - headerHeight)); //Changes search height for ad board//
 
 	//WORK HERE UP//
@@ -167,6 +172,5 @@ function mouseinfo() {
 		document.getElementById('d').style.display = "";
 		document.getElementById('xcoord').innerHTML = sTitle + " " + "(" + l_xcurs + "," + l_ycurs + ")";
 		document.getElementById('ycoord').innerHTML = "";
-		
 	}
 }
