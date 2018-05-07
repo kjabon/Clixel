@@ -25,7 +25,7 @@ $('.video-btn').click(function() {
 	$xxx = event.pageX;
 	$yyy = event.pageY;
 	$carry = true;
-//	showMode = false;
+    
 });
 
 // when the modal is opened autoplay it  

@@ -11,8 +11,7 @@ Scripts for adding new links //is this necessary?//
 Images: take image advertises gives, take xy coordinate, paste it on (4 loop- rgb value of this pixel is rgb value of)
 
 Soon:
-Make coordinates box only come up when a clickable link is there on the edges (150%) - need "If mouse isn't hovering over link, then don't display box"
-How to position a DIV in a specific coordinates? Maybe put it in specific location and only look there
+Copyright
 Display current prize
 Match winning timer to video
 Change banner name
@@ -53,10 +52,10 @@ CAPTCHA every x time
 </head>
 
 <!-- Creates the mouse popup on the sponsor page -->
-<div id="d" style="position: absolute; z-index: 99; border: 1px solid rgb(0, 0, 0); display: none; background: rgb(255, 255, 255);">
+<div id="mousedisplay" style="position: absolute; z-index: 99; border: 1px solid rgb(0, 0, 0); display: none; background: rgb(255, 255, 255);">
 	
 <!-- Leaves hover box coordinates visible after opening the modal -->
-<span id="xcoord"></span><span id="ycoord"></span>
+<span id="displaytitle"></span><span id="xylocation"></span>
 
 </div>
 
@@ -92,10 +91,10 @@ CAPTCHA every x time
 <div id="pixels" style="z-index:1">
 <map id="Map" name="Map">
 
-<area onmouseover="d(this)" type="button" class="btn btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/oT6Xd5QsBOE" data-target="#myModal" shape="rect" coords="500,0,1000,500" title="Google">
-<area onmouseover="d(this)" type="button" class="btn btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/Lb4IcGF5iTQ" data-target="#myModal" shape="rect" coords="0,0,500,500" title="Facebook">
-<area onmouseover="d(this)" type="button" class="btn btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/J6-8DQALGt4" data-target="#myModal" shape="rect" coords="0,500,500,1000" title="Amazon">
-<area onmouseover="d(this)" type="button" class="btn btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/mW6hFttt_KE" data-target="#myModal" shape="rect" coords="500,500,1000,1000" title="Apple">
+<area onmouseover="sponsor(this)" type="button" class="btn btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/oT6Xd5QsBOE" data-target="#myModal" shape="rect" coords="500,0,1000,500" title="Google">
+<area onmouseover="sponsor(this)" type="button" class="btn btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/Lb4IcGF5iTQ" data-target="#myModal" shape="rect" coords="0,0,500,500" title="Facebook">
+<area onmouseover="sponsor(this)" type="button" class="btn btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/J6-8DQALGt4" data-target="#myModal" shape="rect" coords="0,500,500,1000" title="Amazon">
+<area onmouseover="sponsor(this)" type="button" class="btn btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/mW6hFttt_KE" data-target="#myModal" shape="rect" coords="500,500,1000,1000" title="Apple">
 			
 </map>
 

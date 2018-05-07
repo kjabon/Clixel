@@ -1,7 +1,9 @@
 var total = 1731.87;
 var totalwithcommas = total.toLocaleString();
 
-var showMode = false;
+function sponsor(t){
+	sponsortitle = t.title;
+}
 
 function amoeContinue(){
 	document.getElementById("amoebtncontinue").style.display="none";
@@ -16,32 +18,32 @@ function amoeClose(){
 
 var headerHeight = 44; //Changes start (top) of ad board//
 
-var l_xcurs;
-var l_ycurs;
-var l_xcurs_random=Math.floor(Math.random() * 1000) + 1;
-var l_ycurs_random=Math.floor(Math.random() * 1000) + 1;
+var x;
+var y;
+var x_random=Math.floor(Math.random() * 1000) + 1;
+var y_random=Math.floor(Math.random() * 1000) + 1;
 
  //compares the randomly selected number to the one the participant chose//
 function randomCompare(){
 	
-		if (l_xcurs > 1000){
-			l_xcurs = 1000
+		if (x > 1000){
+			x = 1000
 		}
-		if (l_xcurs < 1){
-			l_xcurs = 1
+		if (x < 1){
+			x = 1
 		}
-		if (l_ycurs > 1000 ){
-			l_ycurs = 1000
+		if (y > 1000 ){
+			y = 1000
 		}
-		if (l_ycurs < 1){
-			l_ycurs = 1
+		if (y < 1){
+			y = 1
 		}
-		if (l_xcurs == l_xcurs_random && l_ycurs == l_ycurs_random) {
+		if (x == x_random && y == y_random) {
 			alert("You picked correctly! Congratulations! A new window will now load.")
 			document.getElementById("winner").click();
 		}
 		else {
-			alert("I'm sorry, but you chose (" + l_xcurs + "," + l_ycurs + ") and the winning pixel was (" + l_xcurs_random + "," + l_ycurs_random + ").\nYou were " + Math.round(Math.sqrt((Math.pow(l_xcurs - l_xcurs_random, 2) + Math.pow(l_ycurs - l_ycurs_random, 2)))) + " pixels away from the winning pixel.");
+			alert("I'm sorry, but you chose (" + x + "," + y + ") and the winning pixel was (" + x_random + "," + y_random + ").\nYou were " + Math.round(Math.sqrt((Math.pow(x - x_random, 2) + Math.pow(y - y_random, 2)))) + " pixels away from the winning pixel.");
 			location.reload();
 		}
 }
@@ -86,8 +88,8 @@ function oneintwenty(value){
 	}
 }  
 
-var l_xcurs_faux=Math.floor(Math.random() * 1000) + 1;
-var l_ycurs_faux=Math.floor(Math.random() * 1000) + 1;
+var x_faux=Math.floor(Math.random() * 1000) + 1;
+var y_faux=Math.floor(Math.random() * 1000) + 1;
 
 function amoeButton(){
 
@@ -118,58 +120,47 @@ function amoeButton(){
         document.getElementById("amoebtn").value = "Discover if you've won in 1"}, 7000);
 
 	setTimeout(function(){
-		if (l_xcurs_faux == l_xcurs_faux && l_ycurs_faux == l_ycurs_faux) {
+		if (x_faux == x_faux && y_faux == y_faux) {
 			alert("Congratulations! A new window will now load.");
         	document.getElementById("winner").click();
 		}
 		else{
-			alert("I'm sorry, but you chose (" + l_xcurs_faux + "," + l_ycurs_faux + ") and the winning pixel was (" + l_xcurs_random + "," + l_ycurs_random + ").");
+			alert("I'm sorry, but you chose (" + x_faux + "," + y_faux + ") and the winning pixel was (" + x_random + "," + y_random + ").");
 			location.reload()
 	}}, 8000);
 }
 
 document.onmousemove = mouseinfo;
 
-var sTitle="";
-function d(o) {
-sTitle = o.title;
-}
-
 function mouseinfo() {
-	
-	//WORK HERE DOWN//
 
-	var lhs = (document.body.getBoundingClientRect().width)/2; //Changes where the search area starts for ad block. OffsetWidth supposedly display width of an area//
-	
-	//WORK HERE UP//
+	var coordstart = (document.body.getBoundingClientRect().width)/2; //Changes where the search area starts for ad block. OffsetWidth supposedly display width of an area//
 
 	if ($carry == false){ //boolean found in modal.js
 			$xxx = event.pageX;
 			$yyy = event.pageY;
 	}
-	
-	//WORK HERE DOWN//
 
-	document.getElementById('d').style.left=$xxx + 10; //Changes mouse hover display box start////
-	document.getElementById('d').style.top=$yyy + 18;
+	document.getElementById('mousedisplay').style.left=$xxx + 10; //Changes mouse hover display box start////
+	document.getElementById('mousedisplay').style.top=$yyy + 18; //Changes mouse hover display box start////
 
-	if (((lhs % 1) * 10) < 5) {
-		l_xcurs = Math.ceil(($xxx - lhs + 500)) + 1;
+
+	if (((coordstart % 1) * 10) < 5) {
+		x = Math.ceil(($xxx - coordstart + 500)) + 1;
 	}
 	else {
-		l_xcurs = Math.floor(($xxx - lhs + 500)) + 1;
+		x = Math.floor(($xxx - coordstart + 500)) + 1;
 	}
 	
-	l_ycurs = Math.ceil(($yyy - headerHeight)); //Changes search height for ad board//
-
-	//WORK HERE UP//
-
-	if ((l_ycurs <= 0) || (l_ycurs > 1000) || (l_xcurs <= 0) || (l_xcurs > 1000)){ //Used for hover info panel on empty pixels//
-		document.getElementById('d').style.display = "none";
+	y = Math.ceil(($yyy - headerHeight)); //Changes search height for ad board//
+ 
+	
+	if ((y <= 0) || (y > 1000) || (x <= 0) || (x > 1000)){ //Used for hover info panel on empty pixels//
+		document.getElementById('mousedisplay').style.display = "none";
 	}
 	else {
-		document.getElementById('d').style.display = "";
-		document.getElementById('xcoord').innerHTML = sTitle + " " + "(" + l_xcurs + "," + l_ycurs + ")";
-		document.getElementById('ycoord').innerHTML = "";
+		document.getElementById('mousedisplay').style.display = "";
+		document.getElementById('displaytitle').innerHTML = sponsortitle + " ";
+		document.getElementById('xylocation').innerHTML = "(" + x + "," + y + ")";
 	}
 }
