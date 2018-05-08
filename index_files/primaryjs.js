@@ -5,6 +5,16 @@ function sponsor(t){
 	sponsortitle = t.title;
 }
 
+function amoeAlert(){
+	if (confirm("By using the AMOE, you are not supporting our website. This makes paying the bills very difficult for us.")){
+		amoeContinue()
+	}
+	else{
+		alert("Thank you for supporting our website! :)");
+		location.reload();
+	}
+}
+
 function amoeContinue(){
 	document.getElementById("amoebtncontinue").style.display="none";
 	document.getElementById("amoebtnclose").style.display="none";
