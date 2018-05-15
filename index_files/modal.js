@@ -3,6 +3,7 @@ $(document).ready(function() {
 // Gets the video src from the data-src on each button
 
 var $videoSrc;
+
 $carry = false; //executes different code in gsc3.js depending on boolean status
 
         $('.video-btn')
@@ -34,7 +35,7 @@ if ($('.moreinfo').length){
 }
 else{
 // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
-$("#video").attr('src',$videoSrc + "?rel=0&showinfo=0&modestbranding=1&autoplay=1&controls=0" ); 
+$("#video").attr('src',$videoSrc + "?rel=0&showinfo=0&modestbranding=1&autoplay=1&controls=0"); 
 }
 });
 
