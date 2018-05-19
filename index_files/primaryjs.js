@@ -30,20 +30,20 @@ var headerHeight = 44; //Changes start (top) of ad board//
 
 var x;
 var y;
-var x_random=Math.floor(Math.random() * 1000) + 1;
-var y_random=Math.floor(Math.random() * 1000) + 1;
+var x_random=Math.floor(Math.random() * 1250) + 1;
+var y_random=Math.floor(Math.random() * 800) + 1;
 
  //compares the randomly selected number to the one the participant chose//
 function randomCompare(){
 	
-		if (x > 1000){
-			x = 1000
+		if (x > 1250){
+			x = 1250
 		}
 		if (x < 1){
 			x = 1
 		}
-		if (y > 1000 ){
-			y = 1000
+		if (y > 800){
+			y = 800
 		}
 		if (y < 1){
 			y = 1
@@ -98,8 +98,8 @@ function oneintwenty(value){
 	}
 }  
 
-var x_faux=Math.floor(Math.random() * 1000) + 1;
-var y_faux=Math.floor(Math.random() * 1000) + 1;
+var x_faux=Math.floor(Math.random() * 1250) + 1;
+var y_faux=Math.floor(Math.random() * 800) + 1;
 
 function amoeButton(){
 
@@ -165,7 +165,7 @@ function mouseinfo() {
 	y = Math.ceil(($yyy - headerHeight)); //Changes search height for ad board//
  
 	
-	if ((y <= 0) || (y > 1000) || (x <= 0) || (x > 1000)){ //Used for hover info panel on empty pixels//
+	if ((y <= 0) || (y > 800) || (x <= 0) || (x > 1250)){ //Used for hover info panel on empty pixels//
 		document.getElementById('mousedisplay').style.display = "none";
 	}
 	else {
