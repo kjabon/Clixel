@@ -156,16 +156,16 @@ function mouseinfo() {
 
 
 	if (((coordstart % 1) * 10) < 5) {
-		x = Math.ceil(($xxx - coordstart + 500)) + 1;
+		x = Math.ceil(($xxx - coordstart + 625)) + 1;
 	}
 	else {
-		x = Math.floor(($xxx - coordstart + 500)) + 1;
+		x = Math.floor(($xxx - coordstart + 625)) + 1;
 	}
 	
 	y = Math.ceil(($yyy - headerHeight)); //Changes search height for ad board//
  
 	
-	if ((y <= 0) || (y > 800) || (x <= 0) || (x > 1250)){ //Used for hover info panel on empty pixels//
+	if ((y <= 0) || (y > 800) || (x <= 0) || (x > 1250)){
 		document.getElementById('mousedisplay').style.display = "none";
 	}
 	else {

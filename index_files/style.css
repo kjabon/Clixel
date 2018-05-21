@@ -78,21 +78,13 @@
   background: #E74B37;
 }
 /*Buttons ending*/
-
-	#pageads {             	
-		vertical-align: top;
-		text-align: center;
-		margin-left: auto; 
-		margin-right: auto;
-		padding-top: 10px;
-		}
 	
 	#pixels { /* used for ad board */
 		position: relative;	
 		top:0;
 		left:0;
-		width:1000;
-		height:1000;
+		width:1250;
+		height:800;
 		border:0;
 		margin-left: auto; 
 		margin-right: auto;
@@ -165,36 +157,11 @@
 		font-weight: bold;
 		}
 
-
-	#pagecontent {
-		background:#e1e1e1;
-		padding: 10px;
-		width: 600;
-		text-align: left;
-		vertical-align: top;		
-		}
-
-
-	#stats {
-		position: absolute;	
-		top:4;
-		left:880;
-		width:116px;
-		height:37;
-		border:0;
-		padding: 2 0 0 0;
-		background: url(statbg-out.gif) no-repeat #646464;
-		vertical-align:middle;
-		text-align:center;
-		line-height:16px;
-		}
-
-
 	#toplogo {
 		position: relative;	
 		top:0;
 		left:0;
-		width:1000px;
+		width:1250px;
 		height:45;
 		border:0;
 		margin-left: auto; 
@@ -202,7 +169,6 @@
 		text-align: center;
 		background:#646464;
 		}
-
 
 	#navbar {
 		position: absolute;	
@@ -218,16 +184,6 @@
 		background: url(navbg.gif) repeat #c69b1d;
 		}
 
-	#links {
-
-		height:20px;
-		width:600px;
-		border:0px;
-		text-align: center;
-		margin-left: auto; 
-		margin-right: auto;
-		}
-	
 
 	a.nav:link {
 		color: #000000; font-weight: bold; text-decoration: none; font-size: 9pt;
