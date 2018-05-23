@@ -97,8 +97,7 @@ body {font-size:16px;}
         <img src="./index_files/kenny_cat.jpeg" alt="Jane" style="width:100%">
         <div class="w3-container">
           <h3>Kenneth Jabon</h3>
-          <p class="w3-opacity">Cofounder</p>
-          <p>Adviser</p>
+          <p class="w3-opacity">Adviser</p>
         </div>
       </div>
     </div>
@@ -194,6 +193,17 @@ function onClick(element) {
         <br/>
         <input type="button" id="amoebtncontinue" value="Click here if you accept the terms of use" onclick="amoeAlert();" />
         <input type="button" id="amoebtnclose" value="Click here if you decline the terms of use" onclick="amoeClose();" />
+        <form id="name" style="display: none;">
+          Enter your name to continue - by entering your name, you are agreeing to the legal information above.
+          <br>
+          First name:<br>
+          <input type="text" id="firstname" value="">
+          <br>
+          Last name:<br>
+          <input type="text" id="lastname" value="">
+          <br><br>
+          <input type="button" id="namedone" value="Submit" onclick="namedonefunction()">
+          </form> 
         <div id="textbeforeamoe" style="display: none;">Now just...</div>
         <input type="button" id="amoebtn" style="display: none;" value="Click here to start the countdown!" onclick="amoeButton();" />
         

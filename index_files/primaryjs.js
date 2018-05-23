@@ -7,7 +7,7 @@ function sponsor(t){
 
 function amoeAlert(){
 	if (confirm("By using the AMOE, you are not supporting our website. This makes paying the bills very difficult for us.")){
-		amoeContinue()
+		amoeContinue();
 	}
 	else{
 		alert("Thank you for supporting our website! :)");
@@ -18,8 +18,20 @@ function amoeAlert(){
 function amoeContinue(){
 	document.getElementById("amoebtncontinue").style.display="none";
 	document.getElementById("amoebtnclose").style.display="none";
-	document.getElementById("textbeforeamoe").style.display="block";
-	document.getElementById("amoebtn").style.display="block";
+	document.getElementById("name").style.display="block";
+	//document.getElementById("textbeforeamoe").style.display="block";
+	//document.getElementById("amoebtn").style.display="block";
+}
+
+function namedonefunction(){
+	if (document.getElementById("firstname").value == "" || document.getElementById("lastname").value == ""){
+		alert("Please verify both fields are filled!")
+	}
+	else {
+		document.getElementById("name").style.display="none";
+		document.getElementById("textbeforeamoe").style.display="block";
+		document.getElementById("amoebtn").style.display="block";
+	}
 }
 
 function amoeClose(){
@@ -130,7 +142,7 @@ function amoeButton(){
         document.getElementById("amoebtn").value = "Discover if you've won in 1"}, 7000);
 
 	setTimeout(function(){
-		if (x_faux == x_faux && y_faux == y_faux) {
+		if (x_faux == x_random && y_faux == y_random) {
 			alert("Congratulations! A new window will now load.");
         	document.getElementById("winner").click();
 		}
