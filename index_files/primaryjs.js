@@ -152,20 +152,20 @@ function amoeButton(){
 	}}, 8000);
 }
 
+
 document.onmousemove = mouseinfo;
 
-function mouseinfo() {
+function mouseinfo(event) {
 
 	var coordstart = (document.body.getBoundingClientRect().width)/2; //Changes where the search area starts for ad block. OffsetWidth supposedly display width of an area//
 
 	if ($carry == false){ //boolean found in modal.js
-			$xxx = event.pageX;
-			$yyy = event.pageY;
+		$xxx = event.pageX;
+		$yyy = event.pageY;
 	}
 
 	document.getElementById('mousedisplay').style.left=$xxx + 10; //Changes mouse hover display box start////
 	document.getElementById('mousedisplay').style.top=$yyy + 18; //Changes mouse hover display box start////
-
 
 	if (((coordstart % 1) * 10) < 5) {
 		x = Math.ceil(($xxx - coordstart + 625)) + 1;
@@ -176,7 +176,6 @@ function mouseinfo() {
 	
 	y = Math.ceil(($yyy - headerHeight)); //Changes search height for ad board//
  
-	
 	if ((y <= 0) || (y > 800) || (x <= 0) || (x > 1250)){
 		document.getElementById('mousedisplay').style.display = "none";
 	}
