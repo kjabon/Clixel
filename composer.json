@@ -1,0 +1,5 @@
+{
+    "require": {
+        "pixeloution/true-random": "*"
+    }
+}

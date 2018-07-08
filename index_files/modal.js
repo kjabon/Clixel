@@ -6,27 +6,37 @@ var $videoSrc;
 
 $carry = false; //executes different code in gsc3.js depending on boolean status
 
-        $('.video-btn')
-        	.mouseenter(function() {	
-        		var title = $(this).attr("title");
-        		$(this).attr("tmp_title", title);
-        		$(this).attr("title","");
-        	})
-        	.mouseleave(function() {
-        		var title = $(this).attr("tmp_title");
-        		$(this).attr("title", title);
-        	})
-        	.click(function() {	
-        		var title = $(this).attr("tmp_title");
-        		$(this).attr("title", title);
-        	}); //previous 13 lines hide secondary title popup on ad board
+$(window).bind('beforeunload', function(){
+        $("#myModal").empty();
+        location.reload();
+});
 
-$('.video-btn').click(function() {
+$('.video-btn')
+    .mouseenter(function() {	
+        var title = $(this).attr("title");
+        $(this).attr("tmp_title", title);
+        $(this).attr("title","");
+    })
+    .mouseleave(function() {
+        var title = $(this).attr("tmp_title");
+        $(this).attr("title", title);
+    })
+    .click(function() {	
+        var title = $(this).attr("tmp_title");
+        $(this).attr("title", title);
+    }); //previous 13 lines hide secondary title popup on ad board
+
+$('.video-btn').click(function(event) {
     $videoSrc = $(this).data( "src" );
-	$xxx = event.pageX;
-	$yyy = event.pageY;
+	if (navigator.userAgent.search("Firefox") >= 0){
+        $xxx = event.clientX;
+        $yyy = event.clientY;
+    }
+    else{
+        $xxx = event.pageX;
+        $yyy = event.pageY;
+    }
 	$carry = true;
-    
 });
 
 // when the modal is opened autoplay it  
@@ -52,7 +62,7 @@ $('.winnerFunction').click(function () {
     $("#AMOEmodal").modal('hide');
     $("#myModal").empty();
     $("#AMOEmodal").empty();
-	$("#winningModal").modal('show');
+    $("#winningModal").modal('show');
 });
 
 // Closes first modal and opens 'winning' modal //
@@ -64,15 +74,14 @@ function realwinner() {
 
 // checks to see if 'winner' button was clicked //
 $("#winner").click(function(){
-
    $(this).data('clicked', true)
-
 });
 
 // stop playing the youtube video when I close the modal
 $('#myModal').on('hide.bs.modal', function (e) {
 if ($('.moreinfo').length){
-	location.reload();
+    $("#myModal").empty();
+    location.reload();
 }
 else{
     // a poor man's stop video
@@ -82,14 +91,14 @@ else{
     if ($("#winner").data("clicked")){
    	}
     else{
+        $("#myModal").empty();
     	location.reload();
     	}
 	}
 });
 
-// give warning when exiting winning modal
+// give warning when exiting winning modal //
 $('#winningModal').on('hide.bs.modal', function (e) {
-
         if (confirm("Are you sure you want to leave? To choose later, go to 'My Account' and click on 'My reward choice' at your convenience.")){
         	window.location.reload()
         }
@@ -101,10 +110,10 @@ $('#winningModal').on('hide.bs.modal', function (e) {
 // reloads AMOE modal when exiting unless "Congratulations" //
 $('#AMOEmodal').on('hide.bs.modal', function (e) {
 if ($("#winner").data("clicked")){
-   	}
-    else{
-    	window.location.reload();
-    	}
+}
+else{
+    window.location.reload();
+}
 });
 
 
