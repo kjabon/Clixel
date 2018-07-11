@@ -29,6 +29,8 @@ function namedonefunction(){
 	}
 	else {
 		document.getElementById("name").style.display="none";
+		document.getElementById("firstname").value="";
+		document.getElementById("lastname").value="";
 		document.getElementById("textbeforeamoe").style.display="block";
 		document.getElementById("amoebtn").style.display="block";
 	}

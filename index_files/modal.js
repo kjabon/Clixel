@@ -112,6 +112,8 @@ $('#AMOEmodal').on('hide.bs.modal', function (e) {
 if ($("#winner").data("clicked")){
 }
 else{
+    $(this).find($('#firstname')).val('');
+    $(this).find($('#lastname')).val('');
     window.location.reload();
 }
 });
