@@ -3,6 +3,7 @@ var totalwithcommas = total.toLocaleString();
 
 function sponsor(t){
 	sponsortitle = t.title;
+	sponsorimage = t.src;
 }
 
 function amoeAlert(){
@@ -183,7 +184,19 @@ function mouseinfo(event) {
 	}
 	else {
 		document.getElementById('mousedisplay').style.display = "";
-		document.getElementById('displaytitle').innerHTML = sponsortitle + " ";
+		if ((y > 0) && (y <= 400) && (x > 0) && (x <= 625)){
+			document.getElementById('displayimage').innerHTML = '<img src="./index_files/Facebook.png" width="30" height="30">';
+		}
+		if ((y > 0) && (y <= 400) && (x > 625) && (x < 1250)){
+			document.getElementById('displayimage').innerHTML = '<img src="./index_files/Google.jpg" width="30" height="30">';
+		}
+		if ((y > 400) && (y < 800) && (x > 0) && (x <=625)){
+			document.getElementById('displayimage').innerHTML = '<img src="./index_files/Amazon.jpg" width="30" height="30">';
+		}
+		if ((y > 400) && (y < 800) && (x > 625) && (x < 1250)){
+			document.getElementById('displayimage').innerHTML = '<img src="./index_files/Apple.png" width="30" height="30">';
+		}
+		document.getElementById('displaytitle').innerHTML = " " + sponsortitle + " ";
 		document.getElementById('xylocation').innerHTML = "(" + x + "," + y + ")";
 	}
 }
