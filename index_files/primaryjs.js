@@ -200,3 +200,30 @@ function mouseinfo(event) {
 		document.getElementById('xylocation').innerHTML = "(" + x + "," + y + ")";
 	}
 }
+
+function toggleSponsorImages() {
+	if (document.getElementsByClassName("sponsorimage")[3].style.zIndex == "0"){
+	var sponsorimage = document.getElementsByClassName("sponsorimage")[0];
+	sponsorimage.style.zIndex = "2";
+	document.getElementsByClassName("sponsorimage")[0].removeAttribute("hidden");
+	var sponsorimage = document.getElementsByClassName("sponsorimage")[1];
+	sponsorimage.style.zIndex = "2";
+	document.getElementsByClassName("sponsorimage")[1].removeAttribute("hidden");
+	var sponsorimage = document.getElementsByClassName("sponsorimage")[2];
+	sponsorimage.style.zIndex = "2";
+	document.getElementsByClassName("sponsorimage")[2].removeAttribute("hidden");
+	var sponsorimage = document.getElementsByClassName("sponsorimage")[3];
+	sponsorimage.style.zIndex = "2";
+	document.getElementsByClassName("sponsorimage")[3].removeAttribute("hidden");
+	}
+	else {
+	var sponsorimage = document.getElementsByClassName("sponsorimage")[0];
+	sponsorimage.style.zIndex = "0";
+	var sponsorimage = document.getElementsByClassName("sponsorimage")[1];
+	sponsorimage.style.zIndex = "0";
+	var sponsorimage = document.getElementsByClassName("sponsorimage")[2];
+	sponsorimage.style.zIndex = "0";
+	var sponsorimage = document.getElementsByClassName("sponsorimage")[3];
+	sponsorimage.style.zIndex = "0";
+	}
+}
