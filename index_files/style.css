@@ -268,3 +268,9 @@
 .modal-lg{
 	width: 750px;
 }
+
+.hiddenbutton{
+	background-color: #121212;
+	color: #121212;
+	border: none;
+}
