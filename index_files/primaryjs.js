@@ -202,28 +202,22 @@ function mouseinfo(event) {
 }
 
 function toggleSponsorImages() {
-	if (document.getElementsByClassName("sponsorimage")[3].style.zIndex == "0"){
-	var sponsorimage = document.getElementsByClassName("sponsorimage")[0];
-	sponsorimage.style.zIndex = "2";
+	var pixelbackgroundimage = document.getElementById("pixelbackgroundimage");
+	var map =  document.getElementById("Map");
+	if (pixelbackgroundimage.style.visibility == "visible"){
+	pixelbackgroundimage.style.visibility = "hidden";
+	document.getElementById("sponsorMap").removeAttribute("hidden");
 	document.getElementsByClassName("sponsorimage")[0].removeAttribute("hidden");
-	var sponsorimage = document.getElementsByClassName("sponsorimage")[1];
-	sponsorimage.style.zIndex = "2";
 	document.getElementsByClassName("sponsorimage")[1].removeAttribute("hidden");
-	var sponsorimage = document.getElementsByClassName("sponsorimage")[2];
-	sponsorimage.style.zIndex = "2";
 	document.getElementsByClassName("sponsorimage")[2].removeAttribute("hidden");
-	var sponsorimage = document.getElementsByClassName("sponsorimage")[3];
-	sponsorimage.style.zIndex = "2";
 	document.getElementsByClassName("sponsorimage")[3].removeAttribute("hidden");
 	}
 	else {
-	var sponsorimage = document.getElementsByClassName("sponsorimage")[0];
-	sponsorimage.style.zIndex = "0";
-	var sponsorimage = document.getElementsByClassName("sponsorimage")[1];
-	sponsorimage.style.zIndex = "0";
-	var sponsorimage = document.getElementsByClassName("sponsorimage")[2];
-	sponsorimage.style.zIndex = "0";
-	var sponsorimage = document.getElementsByClassName("sponsorimage")[3];
-	sponsorimage.style.zIndex = "0";
+	pixelbackgroundimage.style.visibility = "visible";
+	document.getElementById("sponsorMap").setAttribute("hidden", "hidden");
+	document.getElementsByClassName("sponsorimage")[0].setAttribute("hidden", "hidden");
+	document.getElementsByClassName("sponsorimage")[1].setAttribute("hidden", "hidden");
+	document.getElementsByClassName("sponsorimage")[2].setAttribute("hidden", "hidden");
+	document.getElementsByClassName("sponsorimage")[3].setAttribute("hidden", "hidden");
 	}
 }

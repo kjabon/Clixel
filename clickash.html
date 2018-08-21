@@ -89,18 +89,19 @@ Scripts for adding new links
 <map id="Map" name="Map">
 
 <area onmouseover="sponsor(this)" type="button" class="btn btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/Lb4IcGF5iTQ" data-target="#myModal" shape="rect" coords="0,0,625,400" title="Facebook">
-<img class=sponsorimage hidden="hidden" src="./index_files/Facebook.png" style="position:absolute; TOP:0; LEFT:0; z-index:0;" width="625" height="400">
+<img class=sponsorimage hidden="hidden" src="./index_files/Facebook.png" style="position:absolute; TOP:0; LEFT:0;" width="625" height="400">
 <area onmouseover="sponsor(this)" type="button" class="btn btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/oT6Xd5QsBOE" data-target="#myModal" shape="rect" coords="625,0,1250,400" title="Google">
-<img class=sponsorimage hidden="hidden" src="./index_files/Google.jpg" style="position:absolute; TOP:0; LEFT:625px; z-index:0;" width="625" height="400">
+<img class=sponsorimage hidden="hidden" src="./index_files/Google.jpg" style="position:absolute; TOP:0; LEFT:625px;" width="625" height="400">
 <area onmouseover="sponsor(this)" type="button" class="btn btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/J6-8DQALGt4" data-target="#myModal" shape="rect" coords="0,400,625,800" title="Amazon">
-<img class=sponsorimage hidden="hidden" src="./index_files/Amazon.jpg" style="position:absolute; TOP:400px; LEFT:0; z-index:0;" width="625" height="400">
+<img class=sponsorimage hidden="hidden" src="./index_files/Amazon.jpg" style="position:absolute; TOP:400px; LEFT:0;" width="625" height="400">
 <area onmouseover="sponsor(this)" type="button" class="btn btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/mW6hFttt_KE" data-target="#myModal" shape="rect" coords="625,400,1250,800" title="Apple">
-<img class=sponsorimage hidden="hidden" src="./index_files/Apple.png" style="position:absolute; TOP:400px; LEFT:625px; z-index:0;" width="625" height="400">
+<img class=sponsorimage hidden="hidden" src="./index_files/Apple.png" style="position:absolute; TOP:400px; LEFT:625px;" width="625" height="400">
+<img id=sponsorMap usemap="Map" hidden="hidden" style="position:absolute; TOP:0; LEFT:0;" width="1250" height="800">
 			
 </map>
 
 <!-- Board overlay image -->
-<img src="./index_files/adboard_money.jpeg" width="1250" height="800" border="0" usemap="#Map" style="position: absolute; top: 0px; left: 0px; border: none">
+<img id=pixelbackgroundimage src="./index_files/adboard_money.jpeg" width="1250" height="800" border="0" usemap="#Map" style="position: absolute; top: 0px; left: 0px; border: none; visibility: visible;">
 
 </center> <!--End of page content -->
 
