@@ -63,7 +63,8 @@ function randomCompare(){
 		if (y < 1){
 			y = 1
 		}
-		randomnumber();
+		randomnumberlength();
+		randomnumberheight();
 		setTimeout(function(){
 			if (x == randone && y == randtwo) {
 			alert("You picked correctly! Congratulations! A new window will now load.")
