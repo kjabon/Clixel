@@ -1,11 +1,11 @@
-<! Our homepage (clickash.html)>
+<!-- Our homepage (clickash.html)>
 
 <! Pseudocode for our webpage, following the million dollar homepage>
 
 <! Header stuff
 
 Working model:
-Random API (server?)
+Server
 Plans for future with money info - AMOE needs to be iron
 
 More resources:
@@ -20,7 +20,7 @@ Zoom in
 Scripts for adding new images
 Scripts for adding new links
 
->
+-->
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -39,15 +39,14 @@ Scripts for adding new links
 	<script type="text/javascript" src="./index_files/modal.js"></script>
 	<script type="text/javascript" src="./index_files/primaryjs.js"></script>
 	<script type="text/javascript" src="./randomJS/node_modules/randomorg-js/dist/randomorg-js.js"></script>
-	<script src="https://cdn.rawgit.com/tunnckoCore/randomorg-js/master/dist/randomorg-js.js"></script>
-	<!-- <script>
+	<script>
 		function randomnumber(){
     var randomJs = new RandomJs();
  
 		var result = randomJs
   			.apikey('96f04c28-ee5d-446e-a763-e1c1f3c867a9')
   			.method('generateIntegers')
-  			.params({n:1,min:789,max:791})
+  			.params({n:2,min:1,max:800}) //Need to create two for the two dimensions?//
   			.post(function(xhr, stream, body) {
   				//in browser:
         		//first argument is xhr object
@@ -64,10 +63,11 @@ Scripts for adding new links
     			console.log('==body==')
     			console.log(body)
     			console.log('==END==')
-          alert(JSON.parse(xhr.responseText).result.random.data[0])
-  			});
-      }
-  </script> -->
+          randone = (JSON.parse(xhr.responseText).result.random.data[0])
+          randtwo = (JSON.parse(xhr.responseText).result.random.data[1])
+        });
+    }
+  </script>
 
 	<title>Clixel</title>
 	<meta name="keywords" content="clixel, million, dollar, pixels, pixel, jason eaton, jason, eaton, kenny jabon, kenny, jabon, entrepreneur, student, loans, advertising, ad, links">
@@ -143,7 +143,6 @@ Scripts for adding new links
 </table>
 
 <button class="hiddenbutton" onclick="toggleSponsorImages()"> [][][][] </button>
-<button onclick="randomnumber()"> [][][][] </button>
 
 </center>
 

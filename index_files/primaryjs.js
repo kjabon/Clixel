@@ -45,12 +45,12 @@ var headerHeight = 44; //Changes start (top) of ad board//
 
 var x;
 var y;
-var x_random=Math.floor(Math.random() * 1250) + 1;
-var y_random=Math.floor(Math.random() * 800) + 1;
 
- //compares the randomly selected number to the one the participant chose//
+//compares the randomly selected number to the one the participant chose//
 function randomCompare(){
-	
+		
+		document.getElementById("maybewinner").innerHTML="Please wait - fetching winning numbers";
+
 		if (x > 1250){
 			x = 1250
 		}
@@ -63,14 +63,17 @@ function randomCompare(){
 		if (y < 1){
 			y = 1
 		}
-		if (x == x_random && y == y_random) {
+		randomnumber();
+		setTimeout(function(){
+			if (x == randone && y == randtwo) {
 			alert("You picked correctly! Congratulations! A new window will now load.")
 			document.getElementById("winner").click();
 		}
 		else {
-			alert("I'm sorry, but you chose (" + x + "," + y + ") and the winning pixel was (" + x_random + "," + y_random + ").\nYou were " + Math.round(Math.sqrt((Math.pow(x - x_random, 2) + Math.pow(y - y_random, 2)))) + " pixels away from the winning pixel.");
+			alert("I'm sorry, but you chose (" + x + "," + y + ") and the winning pixel was (" + randone + "," + randtwo + ").\nYou were " + Math.round(Math.sqrt((Math.pow(x - randone, 2) + Math.pow(y - randtwo, 2)))) + " pixels away from the winning pixel.");
 			location.reload();
-		}
+			}
+		}, 3000);
 }
 
 function winnerexample(){

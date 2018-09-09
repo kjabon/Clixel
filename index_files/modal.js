@@ -149,6 +149,7 @@ $(".video-btn").click(function() {
         	$("#maybewinner").prop("disabled", false); $("#maybewinner").text("Click here to discover if you've won")}, 8000);
         
 		});
+
 $('#amoeModal').on('shown.bs.modal', function (e) {
     
 $("p").text("Hello world!");
