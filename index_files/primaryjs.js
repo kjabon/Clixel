@@ -162,52 +162,6 @@ function amoeButton(){
 	}}, 8000);
 }
 
-
-document.onmousemove = mouseinfo;
-
-function mouseinfo(event) {
-
-	var coordstart = (document.body.getBoundingClientRect().width)/2; //Changes where the search area starts for ad block. OffsetWidth supposedly display width of an area//
-
-	if ($carry == false){ //boolean found in modal.js
-		$xxx = event.pageX;
-		$yyy = event.pageY;
-	}
-
-	document.getElementById('mousedisplay').style.left=$xxx + 10; //Changes mouse hover display box start////
-	document.getElementById('mousedisplay').style.top=$yyy + 18; //Changes mouse hover display box start////
-
-	if (((coordstart % 1) * 10) < 5) {
-		x = Math.ceil(($xxx - coordstart + 625)) + 1;
-	}
-	else {
-		x = Math.floor(($xxx - coordstart + 625)) + 1;
-	}
-	
-	y = Math.ceil(($yyy - headerHeight)); //Changes search height for ad board//
- 
-	if ((y <= 0) || (y > 800) || (x <= 0) || (x > 1250)){
-		document.getElementById('mousedisplay').style.display = "none";
-	}
-	else {
-		document.getElementById('mousedisplay').style.display = "";
-		if ((y > 0) && (y <= 400) && (x > 0) && (x <= 625)){
-			document.getElementById('displayimage').innerHTML = '<img src="./index_files/Facebook.png" width="30" height="30">';
-		}
-		if ((y > 0) && (y <= 400) && (x > 625) && (x < 1250)){
-			document.getElementById('displayimage').innerHTML = '<img src="./index_files/Google.jpg" width="30" height="30">';
-		}
-		if ((y > 400) && (y < 800) && (x > 0) && (x <=625)){
-			document.getElementById('displayimage').innerHTML = '<img src="./index_files/Amazon.jpg" width="30" height="30">';
-		}
-		if ((y > 400) && (y < 800) && (x > 625) && (x < 1250)){
-			document.getElementById('displayimage').innerHTML = '<img src="./index_files/Apple.png" width="30" height="30">';
-		}
-		document.getElementById('displaytitle').innerHTML = " " + sponsortitle + " ";
-		document.getElementById('xylocation').innerHTML = "(" + x + "," + y + ")";
-	}
-}
-
 function toggleSponsorImages() {
 	var pixelbackgroundimage = document.getElementById("pixelbackgroundimage");
 	var map =  document.getElementById("Map");
