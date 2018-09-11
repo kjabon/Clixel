@@ -140,8 +140,11 @@ function amoeButton(){
         document.getElementById("amoebtn").value = "Discover if you've won in 4"}, 4000);
 	
 	setTimeout(function(){
-        document.getElementById("amoebtn").value = "Discover if you've won in 3"}, 5000);
-	
+        document.getElementById("amoebtn").value = "Discover if you've won in 3";
+    	randomnumberlength();
+		randomnumberheight();
+	}, 5000);
+
 	setTimeout(function(){
         document.getElementById("amoebtn").value = "Discover if you've won in 2"}, 6000);
 	
@@ -149,12 +152,12 @@ function amoeButton(){
         document.getElementById("amoebtn").value = "Discover if you've won in 1"}, 7000);
 
 	setTimeout(function(){
-		if (x_faux == x_random && y_faux == y_random) {
+		if (x_faux == randone && y_faux == randtwo) {
 			alert("Congratulations! A new window will now load.");
         	document.getElementById("winner").click();
 		}
 		else{
-			alert("I'm sorry, but you chose (" + x_faux + "," + y_faux + ") and the winning pixel was (" + x_random + "," + y_random + ").");
+			alert("I'm sorry, but you chose (" + x_faux + "," + y_faux + ") and the winning pixel was (" + randone + "," + randtwo + ").");
 			location.reload()
 	}}, 8000);
 }
