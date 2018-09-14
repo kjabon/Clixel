@@ -137,7 +137,10 @@ $(".video-btn").click(function() {
         	$("#maybewinner").text("Discover if you've won in 4")}, 4000);
         
         setTimeout(function(){
-        	$("#maybewinner").text("Discover if you've won in 3")}, 5000);
+        	$("#maybewinner").text("Discover if you've won in 3");
+            randomnumberlength();
+            randomnumberheight();
+        }, 5000); //Fetching the numbers before the button is clicked should probably be adjusted in the final version for security.
         
         setTimeout(function(){
         	$("#maybewinner").text("Discover if you've won in 2")}, 6000);

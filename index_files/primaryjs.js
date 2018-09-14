@@ -6,6 +6,21 @@ function sponsor(t){
 	sponsorimage = t.src;
 }
 
+//alert("By continuing, you acknowledge that this website is a work in progress and you can NOT currently win any money (or anything else).");   //turn on if needed
+
+//var pop = document.getElementById("overlay");   //for a server
+
+//if (document.cookie.indexOf("CERTIFIED") >= 0){  //for a server
+//     pop.style.display = "none";
+//}
+
+//document.getElementById("confirmation").onclick = function(){   //for a server
+//     document.cookie = "CERTIFIED=true";
+//     // should add document.cookie.expires
+//     // as is, this will just be a session cookie
+//	pop.style.display = "none";
+//}
+
 function amoeAlert(){
 	if (confirm("By using the AMOE, you are not supporting our website. This makes paying the bills very difficult for us.")){
 		amoeContinue();
@@ -63,9 +78,6 @@ function randomCompare(){
 		if (y < 1){
 			y = 1
 		}
-		randomnumberlength();
-		randomnumberheight();
-		setTimeout(function(){
 			if (x == randone && y == randtwo) {
 			alert("You picked correctly! Congratulations! A new window will now load.")
 			document.getElementById("winner").click();
@@ -74,7 +86,6 @@ function randomCompare(){
 			alert("I'm sorry, but you chose (" + x + "," + y + ") and the winning pixel was (" + randone + "," + randtwo + ").\nYou were " + Math.round(Math.sqrt((Math.pow(x - randone, 2) + Math.pow(y - randtwo, 2)))) + " pixels away from the winning pixel.");
 			location.reload();
 			}
-		}, 3000);
 }
 
 function winnerexample(){
