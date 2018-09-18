@@ -63,8 +63,6 @@ var y;
 
 //compares the randomly selected number to the one the participant chose//
 function randomCompare(){
-		
-		document.getElementById("maybewinner").innerHTML="Please wait - fetching winning numbers";
 
 		if (x > 1250){
 			x = 1250
