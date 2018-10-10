@@ -6,7 +6,7 @@ function sponsor(t){
 	sponsorimage = t.src;
 }
 
-//alert("By continuing, you acknowledge that this website is a work in progress and you can NOT currently win any money (or anything else).");   //turn on if needed
+alert("By continuing, you acknowledge that this website is a work in progress and you can NOT currently win any money.");   //turn on if needed
 
 //var pop = document.getElementById("overlay");   //for a server
 
@@ -16,8 +16,8 @@ function sponsor(t){
 
 //document.getElementById("confirmation").onclick = function(){   //for a server
 //     document.cookie = "CERTIFIED=true";
-//     // should add document.cookie.expires
-//     // as is, this will just be a session cookie
+     // should add document.cookie.expires
+     // as is, this will just be a session cookie
 //	pop.style.display = "none";
 //}
 
