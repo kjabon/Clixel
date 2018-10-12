@@ -6,20 +6,35 @@ function sponsor(t){
 	sponsorimage = t.src;
 }
 
-alert("By continuing, you acknowledge that this website is a work in progress and you can NOT currently win any money.");   //turn on if needed
+//alert("By continuing, you acknowledge that this website is a work in progress and you can NOT currently win any money.");   //turn on if needed
 
-//var pop = document.getElementById("overlay");   //for a server
+//if (document.cookie.indexOf("CONFIRMATION") >= 0){  //for a server
+//    	document.getElementById("overlay").style.display = "none";
+//		document.getElementById("overlay").style.zindex = "-1";
+//	}
 
-//if (document.cookie.indexOf("CERTIFIED") >= 0){  //for a server
-//     pop.style.display = "none";
+//if (document.cookie.indexOf("CONFIRMATION") > -1){
+//	alert("cookie");
+//    document.getElementById("overlay").style.display = "none";
+//	document.getElementById("overlay").style.zindex = "-1";
+//}
+//else{
+//	alert("no cookie")
 //}
 
-//document.getElementById("confirmation").onclick = function(){   //for a server
-//     document.cookie = "CERTIFIED=true";
-     // should add document.cookie.expires
-     // as is, this will just be a session cookie
-//	pop.style.display = "none";
-//}
+window.onload = function () {
+	if (document.cookie.indexOf("CONFIRMATION") > -1){
+			document.getElementById("overlay").style.display = "none";
+			document.getElementById("overlay").style.zindex = "-1";
+	}
+	else{
+		document.getElementById("confirmation").onclick = function(){   //for a server
+    		document.cookie = "CONFIRMATION=true";
+			document.getElementById("overlay").style.display = "none";
+			document.getElementById("overlay").style.zindex = "-1";
+	}
+}
+}
 
 function amoeAlert(){
 	if (confirm("By using the AMOE, you are not supporting our website. This makes paying the bills very difficult for us.")){

@@ -126,16 +126,16 @@ function mouseinfo(event) {
   }
   else {
     document.getElementById('mousedisplay').style.display = "";
-    if ((y > 0) && (y <= 400) && (x > 0) && (x <= 625)){
+    if ((y > 0) && (y <= 400) && (x > 0) && (x <= 625) && (document.cookie.indexOf("CONFIRMATION") > -1)){
       document.getElementById('displayimage').innerHTML = '<img src="./index_files/Facebook.png" width="30" height="30">';
     }
-    if ((y > 0) && (y <= 400) && (x > 625) && (x < 1250)){
+    if ((y > 0) && (y <= 400) && (x > 625) && (x < 1250) && (document.cookie.indexOf("CONFIRMATION") > -1)){
       document.getElementById('displayimage').innerHTML = '<img src="./index_files/Google.jpg" width="30" height="30">';
     }
-    if ((y > 400) && (y < 800) && (x > 0) && (x <=625)){
+    if ((y > 400) && (y < 800) && (x > 0) && (x <=625) && (document.cookie.indexOf("CONFIRMATION") > -1)){
       document.getElementById('displayimage').innerHTML = '<img src="./index_files/Amazon.jpg" width="30" height="30">';
     }
-    if ((y > 400) && (y < 800) && (x > 625) && (x < 1250)){
+    if ((y > 400) && (y < 800) && (x > 625) && (x < 1250) && (document.cookie.indexOf("CONFIRMATION") > -1)){
       document.getElementById('displayimage').innerHTML = '<img src="./index_files/Apple.png" width="30" height="30">';
     }
     document.getElementById('displaytitle').innerHTML = " " + sponsortitle + " ";
@@ -150,16 +150,16 @@ function mouseinfo(event) {
 
 </head>
 
-<!-- for server
-<div id="overlay">
+<!-- for server-->
+<div id="overlay" class = "animated fadeIn">
     <center>
-        <br/><br/><br/><br/><br/><br/>
-        By clicking <input type="button" id="confirmation" value="HERE" />
-        I acknowledge that this website is a work in progress<br/>
-        and I can NOT currently win any money (or anything else).</br>
+        <br/><br/><br/><br/><br/><br/><br/>
+        By clicking <input type="button" id="confirmation" style="border-radius: 8px" value="HERE"/>
+        you acknowledge that this website is a work in progress<br/>
+        and you can NOT win any money at this time.</br>
     </center>
 </div>
--->
+
 
 <!-- Creates the mouse popup on the sponsor page -->
 <div id="mousedisplay" style="position: absolute; z-index: 99; border: 1px solid rgb(0, 0, 0); display: none; background: rgb(255, 255, 255);">
