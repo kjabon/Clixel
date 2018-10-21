@@ -6,22 +6,6 @@ function sponsor(t){
 	sponsorimage = t.src;
 }
 
-//alert("By continuing, you acknowledge that this website is a work in progress and you can NOT currently win any money.");   //turn on if needed
-
-//if (document.cookie.indexOf("CONFIRMATION") >= 0){  //for a server
-//    	document.getElementById("overlay").style.display = "none";
-//		document.getElementById("overlay").style.zindex = "-1";
-//	}
-
-//if (document.cookie.indexOf("CONFIRMATION") > -1){
-//	alert("cookie");
-//    document.getElementById("overlay").style.display = "none";
-//	document.getElementById("overlay").style.zindex = "-1";
-//}
-//else{
-//	alert("no cookie")
-//}
-
 window.onload = function () {
 	if (document.cookie.indexOf("CONFIRMATION") > -1){
 			document.getElementById("overlay").style.display = "none";

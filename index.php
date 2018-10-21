@@ -1,3 +1,12 @@
+<?php
+
+$total = 173130.82;
+setlocale(LC_MONETARY, 'en_US.UTF-8');
+$totalwithcommas = money_format('%!i', $total);
+$totaloverten = ($total/10);
+$tenpercenttotal = money_format('%!i', $totaloverten);
+
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
@@ -177,7 +186,7 @@ function mouseinfo(event) {
 
 		</div>
 
-	</header>  
+	</header>
 
 <!-- Pixel layout -->
 <div id="pixels" style="z-index:1">
@@ -204,7 +213,6 @@ function mouseinfo(event) {
 <table>
 
 <!-- Copyright bar at bottom -->
-
 <tr><td id="copyright" height="18" width=1250px>Established by Jason Eaton and Kenneth Jabon. This website is a work in progress; prizes are not being awarded.  All copyrighted material on this website is for example purposes only; it does not reflect actual sponsorship or support of this site.</td></tr> <!--Clixel © 2018 Jason Eaton and Kenneth Jabon. All rights reserved. We are not responsible for the content of linked advertisements. All sponsor content is © of the respective owner(s).-->
 
 
@@ -264,8 +272,8 @@ function mouseinfo(event) {
 
         	<!-- Left side of winning modal -->
         	<div class="split left">
-    		<h3>10% of Total Reward <br>($<script type="text/javascript"> document.write(tenpercentwithcommas)</script>)</h3>
-    		<button type="button" id="10percent" style="margin-top:20px" z-index=1 onclick="fractionfunction()">I choose $<script type="text/javascript"> document.write(tenpercentwithcommas)</script>!</button>
+    		<h3>10% of Total Reward <br>($<?php echo $tenpercenttotal; ?>)</h3>
+    		<button type="button" id="10percent" style="margin-top:20px" z-index=1 onclick="fractionfunction()">I choose $<?php echo $tenpercenttotal; ?>!</button>
 			</div>
 
 			<div class="split middle">
@@ -273,7 +281,7 @@ function mouseinfo(event) {
 
 			<!-- Right side of winning modal -->
 			<div class="split right">
-    		<h3>1 in 20 Chance of Total Reward ($<script type="text/javascript"> document.write(totalwithcommas)</script>)</h3>
+    		<h3>1 in 20 Chance of Total Reward ($<?php echo $totalwithcommas; ?>)</h3>
     		<button type="button" id="10percent" value="1" style="margin-top:20px" z-index=1 onclick="oneintwenty(this.value)">1</button>
     		<button type="button" id="10percent" value="2" style="margin-top:20px" z-index=1 onclick="oneintwenty(this.value)">2</button>
     		<button type="button" id="10percent" value="3" style="margin-top:20px" z-index=1 onclick="oneintwenty(this.value)">3</button>
