@@ -6,6 +6,21 @@ $totalwithcommas = money_format('%!i', $total);
 $totaloverten = ($total/10);
 $tenpercenttotal = money_format('%!i', $totaloverten);
 
+setcookie("zindex", 101);
+setcookie("display", block);
+
+if (isset($_COOKIE['CONFIRMATION'])){
+  setcookie("zindex", -1);
+  setcookie("display", none);
+}
+else{
+  if(isset($_POST['confirmation'])){
+    setcookie("CONFIRMATION", true);
+    setcookie("zindex", -1);
+    setcookie("display", none);
+  }
+}
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
@@ -18,14 +33,14 @@ $tenpercenttotal = money_format('%!i', $totaloverten);
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="./index_files/style.css">
+	<link rel="stylesheet" type="text/css" href="./index_files/style.php">
 	<link type="text/css" rel="stylesheet" href="./index_files/banner-styles.css">
 	<!--Google jquery CDN-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="./index_files/modal.js"></script>
-	<script type="text/javascript" src="./index_files/primaryjs.js"></script>
+	<script type="text/javascript" src="./index_files/primaryjs_test.js"></script>
 	<script type="text/javascript" src="./randomJS/node_modules/randomorg-js/dist/randomorg-js.js"></script>
 	<script>
 		function randomnumberlength(){
@@ -142,7 +157,7 @@ function mouseinfo(event) {
 <div id="overlay" class="animated fadeIn">
     <center>
         <br/><br/><br/><br/><br/><br/><br/>
-        By clicking <input type="button" id="confirmation" style="border-radius: 8px" value="HERE"/>
+        By clicking <form method="post" style="display: inline;"><input type="submit" name="confirmation" style="border-radius: 8px" value="HERE"/></form>
         you acknowledge that this website is a work in progress<br/>
         and you can NOT win any money at this time.</br>
         <br/>
