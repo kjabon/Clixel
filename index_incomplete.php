@@ -21,6 +21,40 @@ else{
   }
 }
 
+$x;
+$y;
+
+//compares the randomly selected number to the one the participant chose//
+function randomCompare(){
+
+    if ($x > 1250){
+      $x = 1250;
+    }
+    if ($x < 1){
+      $x = 1;
+    }
+    if ($y > 800){
+      $y = 800;
+    }
+    if ($y < 1){
+      $y = 1;
+    }
+    if ($x == $randone && $y == $randtwo) {
+      echo "<script type='text/javascript'>alert('You picked correctly! Congratulations! A new window will now load.');</script>";
+      echo '<script type="text/javascript">',
+      'winner();',
+      '</script>';
+    }
+    else {
+      echo "<script type='text/javascript'>alert('I'm sorry, but you chose (" + $x + "," + $y + ") and the winning pixel was (" + $randone + "," + $randtwo + ").\nYou were " + round(sqrt((pow($x - $randone, 2) + pow($y - $randtwo, 2)))) + " pixels away from the winning pixel.');</script>";
+      
+      }
+}
+
+if (isset($_POST['maybewinner'])) {
+    randomCompare();
+}
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
@@ -254,7 +288,8 @@ function mouseinfo(event) {
 			</div>
 
 			<!-- 'Winner?' button -->
-			<button type="button" id="maybewinner" onclick="randomCompare()">Discover if you've won in 8</button>
+			<!-- <button type="button" id="maybewinner" onclick="randomCompare()">Discover if you've won in 8</button> -->
+      <form method="post" style="display: inline;"><input type="submit" name="maybewinner" value="Discover if you've won in 8"/></form>
 
 			<!-- 'Winner' example button -->
 			<button type="button" id="winnerexample" onclick="winnerexample()">'Winner' example</button>

@@ -2,7 +2,18 @@ function sponsor(t){
   sponsortitle = t.title;
 }
 
+function winner(){
+document.getElementById("winner").click();
+}
+
+var total = 173130.82;
+
 //don't transfer code above this to php
+
+var headerHeight = 44; //Changes start (top) of ad board//
+
+var x;
+var y;
 
 function amoeAlert(){
 	if (confirm("By using the AMOE, you are not supporting our website. This makes paying the bills very difficult for us.")){
@@ -15,11 +26,11 @@ function amoeAlert(){
 }
 
 function amoeContinue(){
-	document.getElementById("amoebtncontinue").style.display="none";
-	document.getElementById("amoebtnclose").style.display="none";
-	document.getElementById("name").style.display="block";
-	//document.getElementById("textbeforeamoe").style.display="block";
-	//document.getElementById("amoebtn").style.display="block";
+  document.getElementById("amoebtncontinue").style.display="none";
+  document.getElementById("amoebtnclose").style.display="none";
+  document.getElementById("name").style.display="block";
+  //document.getElementById("textbeforeamoe").style.display="block";
+  //document.getElementById("amoebtn").style.display="block";
 }
 
 function namedonefunction(){
@@ -37,36 +48,6 @@ function namedonefunction(){
 
 function amoeClose(){
 	location.reload();
-}
-
-var headerHeight = 44; //Changes start (top) of ad board//
-
-var x;
-var y;
-
-//compares the randomly selected number to the one the participant chose//
-function randomCompare(){
-
-		if (x > 1250){
-			x = 1250
-		}
-		if (x < 1){
-			x = 1
-		}
-		if (y > 800){
-			y = 800
-		}
-		if (y < 1){
-			y = 1
-		}
-			if (x == randone && y == randtwo) {
-			alert("You picked correctly! Congratulations! A new window will now load.")
-			document.getElementById("winner").click();
-		}
-		else {
-			alert("I'm sorry, but you chose (" + x + "," + y + ") and the winning pixel was (" + randone + "," + randtwo + ").\nYou were " + Math.round(Math.sqrt((Math.pow(x - randone, 2) + Math.pow(y - randtwo, 2)))) + " pixels away from the winning pixel.");
-			location.reload();
-			}
 }
 
 function winnerexample(){

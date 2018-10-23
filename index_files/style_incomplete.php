@@ -1,3 +1,7 @@
+<?php 
+	header("Content-type: text/css"); 
+?>
+
 	body {
 		margin: 0px 0px 0px 0px;
 		padding:0px;
@@ -13,7 +17,6 @@
 		} /* used for top navigation bar */
 
 /*Button beginning*/
-
 /* Shared */
 .loginBtn {
   box-sizing: border-box;
@@ -276,7 +279,7 @@
 }
 
 #overlay{
-	display: block;
+	display: <?php echo $_COOKIE['display']; ?>;
 	position: absolute;
 	top: 0%;
 	left: 0%;
@@ -284,7 +287,7 @@
 	height: 100vh;
 	background-color: black;
     color: white;
-    z-index: 1001;
+    z-index: <?php echo $_COOKIE['zindex']; ?>;
 	-moz-opacity: 0.7;
 	opacity:.90;
 	filter: alpha(opacity=70);
