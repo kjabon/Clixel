@@ -142,6 +142,9 @@ $(".video-btn").click(function() {
             //    type: "POST", //request type
             //    datatype: "int",
             //    data: { "callphp": "1"},
+            //    success:function(data) {
+            //        randone = data;
+            //    }
             //});
         }, 5000); //Fetching the numbers before the button is clicked should probably be adjusted in the final version for security.
         

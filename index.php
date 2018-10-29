@@ -83,10 +83,12 @@ $json1 = $random->generateIntegers(1, 1, 1250, false);
 $json2 = $random->generateIntegers(1, 1, 800, false);
 $result1 = $json1['result']['random']['data'][0];
 $result2 = $json2['result']['random']['data'][0];
-//echo "<script>";
-//echo "var randone = " . $result1 . ";";
-//echo "var randtwo = " . $result2 . ";";
-//echo "</script>";
+//echo $result1;
+//echo $result2;
+echo "<script type='text/javascript'>";
+echo "var randone = " . $result1 . ";";
+echo "var randtwo = " . $result2 . ";";
+echo "</script>";
 //}
 // Signed methods
 // following functions returns the above with signed data
@@ -95,11 +97,6 @@ $result2 = $json2['result']['random']['data'][0];
 //$random->verifySignature($result['result']['random'], $result['result']['signature']);
 
 ?>
-
-<script type="text/javascript">
-    var randone = "<?php Print($result1); ?>";
-    var randtwo = "<?php Print($result2); ?>";
-</script>
 
 <!-- for server-->
 <div id="overlay" class="animated fadeIn">
