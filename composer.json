@@ -1,5 +1,6 @@
 {
     "require": {
-        "pixeloution/true-random": "*"
+        "pixeloution/true-random": "*",
+        "defiant/randomorg": "^1.0"
     }
 }
