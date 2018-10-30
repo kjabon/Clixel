@@ -137,15 +137,16 @@ $(".video-btn").click(function() {
         
         setTimeout(function(){
             $("#maybewinner").text("Discover if you've won in 3");
-            //$.ajax({
-            //    url:"index.php", //the page containing php script
-            //    type: "POST", //request type
-            //    datatype: "int",
-            //    data: { "callphp": "1"},
-            //    success:function(data) {
-            //        randone = data;
-            //    }
-            //});
+            $.ajax({
+                url:"randomvars.php", //the page containing php script
+                type: "POST", //request type
+                datatype:"json",
+                data: { "callphp": "1"},
+                success: function (data){
+                    randone = data[0];
+                    randtwo = data[1];
+                }
+            });
         }, 5000); //Fetching the numbers before the button is clicked should probably be adjusted in the final version for security.
         
         setTimeout(function(){
