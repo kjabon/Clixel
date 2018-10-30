@@ -16,7 +16,6 @@ class ComposerStaticInit78d4548425e146b9896e130ca59d4e92
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Component\\Translation\\' => 30,
-            'Symfony\\Component\\EventDispatcher\\' => 34,
         ),
         'R' => 
         array (
@@ -46,10 +45,6 @@ class ComposerStaticInit78d4548425e146b9896e130ca59d4e92
         'Symfony\\Component\\Translation\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/translation',
-        ),
-        'Symfony\\Component\\EventDispatcher\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/event-dispatcher',
         ),
         'RandomOrg\\' => 
         array (
@@ -81,34 +76,12 @@ class ComposerStaticInit78d4548425e146b9896e130ca59d4e92
         0 => __DIR__ . '/..' . '/nesbot/carbon/src',
     );
 
-    public static $prefixesPsr0 = array (
-        'P' => 
-        array (
-            'Pixeloution' => 
-            array (
-                0 => __DIR__ . '/..' . '/pixeloution/true-random/src',
-            ),
-        ),
-        'G' => 
-        array (
-            'Guzzle\\Tests' => 
-            array (
-                0 => __DIR__ . '/..' . '/guzzle/guzzle/tests',
-            ),
-            'Guzzle' => 
-            array (
-                0 => __DIR__ . '/..' . '/guzzle/guzzle/src',
-            ),
-        ),
-    );
-
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit78d4548425e146b9896e130ca59d4e92::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit78d4548425e146b9896e130ca59d4e92::$prefixDirsPsr4;
             $loader->fallbackDirsPsr4 = ComposerStaticInit78d4548425e146b9896e130ca59d4e92::$fallbackDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit78d4548425e146b9896e130ca59d4e92::$prefixesPsr0;
 
         }, null, ClassLoader::class);
     }
