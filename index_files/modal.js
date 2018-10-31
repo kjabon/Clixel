@@ -200,7 +200,7 @@ $(".amoebtn").click(function() {
         $(".amoebtn").val("Discover if you've won in 1")}, 7000);
         
     setTimeout(function(){
-        if (randone == randone && randtwo == randtwo) {
+        if (x_faux == randone && y_faux == randtwo) {
             alert("Congratulations! A new window will now load.");
             $("#winner").click();
         }

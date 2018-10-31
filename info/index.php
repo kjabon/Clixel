@@ -41,7 +41,7 @@ body {font-size:16px;}
     <a href="#auctionhouse" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">The Auction House</a>
     <a href="#copyright" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Copyright</a>
     <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
-    <a href="./clickash.html"target="_blank" class="w3-bar-item w3-button w3-hover-white">Go to Clixel</a>
+    <a href="../index.php" target="_blank" class="w3-bar-item w3-button w3-hover-white">Go to Clixel</a>
     
   </div>
 </nav>
@@ -116,7 +116,7 @@ body {font-size:16px;}
   <div class="w3-container" id="auctionhouse" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-red"><b>The Auction House</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p>You can sell the ad space you have purchased on our board. For more information, click on the following link: <a href="../auction/index.html"target="_blank">The Auction House</a></p>
+    <p>You can sell the ad space you have purchased on our board. For more information, click on the following link: <a href="../auction/index.php"target="_blank">The Auction House</a></p>
   </div>
 
     <!-- Copyright -->
