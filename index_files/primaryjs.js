@@ -128,47 +128,47 @@ function oneintwenty(value){
 var x_faux=Math.floor(Math.random() * 1250) + 1;
 var y_faux=Math.floor(Math.random() * 800) + 1;
 
-function amoeButton(){
+//function amoeButton(){
 
-	document.getElementById("amoebtn").disabled = true;
+//	document.getElementById("amoebtn").disabled = true;
 	
-    setTimeout(function(){
-        document.getElementById("amoebtn").value = "Discover if you've won in 8"}, 0);
+//    setTimeout(function(){
+//        document.getElementById("amoebtn").value = "Discover if you've won in 8"}, 0);
 	
-	setTimeout(function(){
-        document.getElementById("amoebtn").value = "Discover if you've won in 7"}, 1000);
+//	setTimeout(function(){
+//        document.getElementById("amoebtn").value = "Discover if you've won in 7"}, 1000);
 	
-	setTimeout(function(){
-        document.getElementById("amoebtn").value = "Discover if you've won in 6"}, 2000);
+//	setTimeout(function(){
+//        document.getElementById("amoebtn").value = "Discover if you've won in 6"}, 2000);
 	
-	setTimeout(function(){
-        document.getElementById("amoebtn").value = "Discover if you've won in 5"}, 3000);
+//	setTimeout(function(){
+//        document.getElementById("amoebtn").value = "Discover if you've won in 5"}, 3000);
 	
-	setTimeout(function(){
-        document.getElementById("amoebtn").value = "Discover if you've won in 4"}, 4000);
+//	setTimeout(function(){
+//        document.getElementById("amoebtn").value = "Discover if you've won in 4"}, 4000);
 	
-	setTimeout(function(){
-        document.getElementById("amoebtn").value = "Discover if you've won in 3";
-    	randomnumberlength();
-		randomnumberheight();
-	}, 5000);
+//	setTimeout(function(){
+//        document.getElementById("amoebtn").value = "Discover if you've won in 3";
+//    	randomnumberlength();
+//		randomnumberheight();
+//	}, 5000);
 
-	setTimeout(function(){
-        document.getElementById("amoebtn").value = "Discover if you've won in 2"}, 6000);
+//	setTimeout(function(){
+//        document.getElementById("amoebtn").value = "Discover if you've won in 2"}, 6000);
 	
-	setTimeout(function(){
-        document.getElementById("amoebtn").value = "Discover if you've won in 1"}, 7000);
+//	setTimeout(function(){
+//        document.getElementById("amoebtn").value = "Discover if you've won in 1"}, 7000);
 
-	setTimeout(function(){
-		if (x_faux == randone && y_faux == randtwo) {
-			alert("Congratulations! A new window will now load.");
-        	document.getElementById("winner").click();
-		}
-		else{
-			alert("I'm sorry, but you chose (" + x_faux + "," + y_faux + ") and the winning pixel was (" + randone + "," + randtwo + ").");
-			location.reload()
-	}}, 8000);
-}
+//	setTimeout(function(){
+//		if (x_faux == randone && y_faux == randtwo) {
+//			alert("Congratulations! A new window will now load.");
+//        	document.getElementById("winner").click();
+//		}
+//		else{
+//			alert("I'm sorry, but you chose (" + x_faux + "," + y_faux + ") and the winning pixel was (" + randone + "," + randtwo + ").");
+//			location.reload()
+//	}}, 8000);
+//}
 
 function toggleSponsorImages() {
 	var pixelbackgroundimage = document.getElementById("pixelbackgroundimage");

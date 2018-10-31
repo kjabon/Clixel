@@ -17,7 +17,6 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="./index_files/modal.js"></script>
 	<script type="text/javascript" src="./index_files/primaryjs.js"></script>
-	<script type="text/javascript" src="./randomJS/node_modules/randomorg-js/dist/randomorg-js.js"></script>
   <script> //move this to .js file for clickash only in the future//
 document.onmousemove = mouseinfo;
 
@@ -114,7 +113,7 @@ function mouseinfo(event) {
 
 			<!-- "New to Clixel? Click here!" button-->
   			<div class="w3-display-right w3-text-white" style="padding:30px; z-index: 1">
-			<p><a href="./info/index.html"target="_blank" class="w3-button w3-light-grey w3-padding-small w3-large w3-hover-opacity-off" style="position:relative; TOP:6px; LEFT:25px; z-index:1;">New to Clixel? Click here!</a></p>
+			<p><a href="./info/index.php"target="_blank" class="w3-button w3-light-grey w3-padding-small w3-large w3-hover-opacity-off" style="position:relative; TOP:6px; LEFT:25px; z-index:1;">New to Clixel? Click here!</a></p>
   			</div>
 
 		</div>

@@ -121,44 +121,96 @@ else{
 // Have random compare "winner" button appear after time//
 $(".video-btn").click(function() {
     
-        $("#maybewinner").prop("disabled", true);
+    $("#maybewinner").prop("disabled", true);
         
-        setTimeout(function(){
-            $("#maybewinner").text("Discover if you've won in 7")}, 1000);
+    setTimeout(function(){
+        $("#maybewinner").text("Discover if you've won in 7")}, 1000);
         
-        setTimeout(function(){
-            $("#maybewinner").text("Discover if you've won in 6")}, 2000);
+    setTimeout(function(){
+        $("#maybewinner").text("Discover if you've won in 6")}, 2000);
         
-        setTimeout(function(){
-            $("#maybewinner").text("Discover if you've won in 5")}, 3000);
+    setTimeout(function(){
+        $("#maybewinner").text("Discover if you've won in 5")}, 3000);
         
-        setTimeout(function(){
-            $("#maybewinner").text("Discover if you've won in 4")}, 4000);
+    setTimeout(function(){
+        $("#maybewinner").text("Discover if you've won in 4")}, 4000);
         
-        setTimeout(function(){
-            $("#maybewinner").text("Discover if you've won in 3");
-            $.ajax({
-                url:"randomvars.php", //the page containing php script
-                type: "POST", //request type
-                datatype:"json",
-                data: { "callphp": "1"},
-                success: function (data){
-                    randone = data[0];
-                    randtwo = data[1];
-                }
-            });
-        }, 5000); //Fetching the numbers before the button is clicked should probably be adjusted in the final version for security.
-        
-        setTimeout(function(){
-            $("#maybewinner").text("Discover if you've won in 2")}, 6000);
-
-        setTimeout(function(){
-            $("#maybewinner").text("Discover if you've won in 1")}, 7000);
-        
-        setTimeout(function(){
-            $("#maybewinner").prop("disabled", false); $("#maybewinner").text("Click here to discover if you've won")}, 8000);
-        
+    setTimeout(function(){
+        $("#maybewinner").text("Discover if you've won in 3");
+        $.ajax({
+            url:"randomvars.php",
+            type: "POST",
+            datatype:"json",
+            data: { "callphp": "1"},
+            success: function (data){
+                randone = data[0];
+                randtwo = data[1];
+            }
         });
+    }, 5000); //Fetching the numbers before the button is clicked should probably be adjusted in the final version for security.
+        
+    setTimeout(function(){
+        $("#maybewinner").text("Discover if you've won in 2")}, 6000);
+
+    setTimeout(function(){
+        $("#maybewinner").text("Discover if you've won in 1")}, 7000);
+        
+    setTimeout(function(){
+        $("#maybewinner").prop("disabled", false); $("#maybewinner").text("Click here to discover if you've won")}, 8000);
+        
+});
+
+$(".amoebtn").click(function() {
+    
+    $(".amoebtn").prop("disabled", true);
+
+    setTimeout(function(){
+        $(".amoebtn").val("Discover if you've won in 8")}, 0);
+        
+    setTimeout(function(){
+        $(".amoebtn").val("Discover if you've won in 7")}, 1000);
+        
+    setTimeout(function(){
+        $(".amoebtn").val("Discover if you've won in 6")}, 2000);
+        
+    setTimeout(function(){
+        $(".amoebtn").val("Discover if you've won in 5")}, 3000);
+        
+    setTimeout(function(){
+        $(".amoebtn").val("Discover if you've won in 4")}, 4000);
+        
+    setTimeout(function(){
+        $(".amoebtn").val("Discover if you've won in 3");
+        $.ajax({
+            url:"../randomvars.php",
+            type: "POST",
+            datatype:"json",
+            data: { "callphp": "1"},
+            success: function (data){
+                randone = data[0];
+                randtwo = data[1];
+            }
+        });
+    }, 5000); //Fetching the numbers before the button is clicked should probably be adjusted in the final version for security.
+        
+    setTimeout(function(){
+        $(".amoebtn").val("Discover if you've won in 2")}, 6000);
+
+    setTimeout(function(){
+        $(".amoebtn").val("Discover if you've won in 1")}, 7000);
+        
+    setTimeout(function(){
+        if (randone == randone && randtwo == randtwo) {
+            alert("Congratulations! A new window will now load.");
+            $("#winner").click();
+        }
+        else{
+            alert("I'm sorry, but you chose (" + x_faux + "," + y_faux + ") and the winning pixel was (" + randone + "," + randtwo + ").");
+            location.reload();
+        }
+    }, 8000);
+        
+});
 
 $('#amoeModal').on('shown.bs.modal', function (e) {
     
