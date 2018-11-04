@@ -17,6 +17,16 @@
     <script type="text/javascript" src="../index_files/modal.js"></script>
     <script type="text/javascript" src="../index_files/primaryjs.js"></script>
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-128568955-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-128568955-1');
+</script>
+
 <style>
 body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
 body {font-size:16px;}
@@ -130,22 +140,7 @@ body {font-size:16px;}
   <div class="w3-container" id="contact" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-red"><b>Contact Us</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p>Have a question or feedback? (This does not currently work. Sorry for the inconvenience!)</p>
-    <form action="/action_page.php" target="_blank">
-      <div class="w3-section">
-        <label>Name</label>
-        <input class="w3-input w3-border" type="text" name="Name" required>
-      </div>
-      <div class="w3-section">
-        <label>Email</label>
-        <input class="w3-input w3-border" type="text" name="Email" required>
-      </div>
-      <div class="w3-section">
-        <label>Message</label>
-        <input class="w3-input w3-border" type="text" name="Message" required>
-      </div>
-      <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send Message</button>
-    </form>  
+    <p>Have questions or feedback? Want to help make this website a success? Contact us at ClixelWebsite@gmail.com!</p>
   </div>
 
 <!-- End page content -->

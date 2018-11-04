@@ -17,6 +17,17 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="./index_files/modal.js"></script>
 	<script type="text/javascript" src="./index_files/primaryjs.js"></script>
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-128568955-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-128568955-1');
+</script>
+
   <script> //move this to .js file for clickash only in the future//
 document.onmousemove = mouseinfo;
 
