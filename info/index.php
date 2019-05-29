@@ -73,7 +73,7 @@ body {font-size:16px;}
     <h1 class="w3-xxxlarge w3-text-red"><b>What is Clixel?</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
     <p>Clixel allows users the chance to win money without spending money!</p>
-    <p>The concept is simple - there is a hidden pixel somewhere on the sponsor board. Find the pixel by clicking on the board; a message will play from the respective sponsor. When able, press the "Click here to discover if you've won" button. If you did not win, the pixel changes to another random location on the sponsor board and the process repeats.
+    <p>The concept is simple - there is a winning pixel hidden somewhere on the sponsor board. Click on a pixel to begin a countdown and a message from the respective sponsor. After the countdown, press the "Click here to discover if you've won" button. If you chose the winning pixel, you can take a percentage of the total winnings or try your chances at the full amount. If you did not win, the pixel changes to another random location on the sponsor board and the process repeats.
     </p>
   </div>
   
@@ -93,8 +93,8 @@ body {font-size:16px;}
       <div class="w3-light-grey">
         <img src="./images/jason_dog.jpeg" alt="John" style="width:100%">
         <div class="w3-container">
-          <h3>Jason Eaton</h3>
-          <p class="w3-opacity">Founder</p>
+          <h3>Jason</h3>
+          <p class="w3-opacity">Founder, CEO</p>
           <p>25 year old entrepreneur living and working in Silicon Valley</p>
         </div>
       </div>
@@ -105,7 +105,7 @@ body {font-size:16px;}
       <div class="w3-light-grey">
         <img src="./images/kenny_cat.jpeg" alt="Jane" style="width:100%">
         <div class="w3-container">
-          <h3>Kenneth Jabon</h3>
+          <h3>Kenneth</h3>
           <p class="w3-opacity">Adviser</p>
         </div>
       </div>

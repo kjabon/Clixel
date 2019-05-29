@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset=UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1" ><!-- http-equiv="Content-Type" content="text/html; charset=UTF-8">-->
+<meta name="viewport" content="width=1250">
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -76,7 +76,7 @@ function mouseinfo(event) {
   </script>
 
 	<title>Clixel</title>
-	<meta name="keywords" content="clixel, million, dollar, pixels, pixel, jason eaton, jason, eaton, kenny jabon, kenny, jabon, entrepreneur, student, loans, advertising, ad, links">
+	<meta name="keywords" content="clixel, million, dollar, pixels, pixel, jason, kenny, kenneth, entrepreneur, student, loans, advertising, ad, links">
 	<meta name="description" content="Selling ad space and giving away cash in the process.">
 
 </head>
@@ -157,7 +157,7 @@ function mouseinfo(event) {
 
 <!-- Copyright bar at bottom -->
 
-<tr><td id="copyright" height="18" width=1250px>Established by Jason Eaton and Kenneth Jabon. This website is a work in progress; prizes are not being awarded.  All copyrighted material on this website is for example purposes only; it does not reflect actual sponsorship or support of this site.</td></tr> <!--Clixel © 2018 Jason Eaton and Kenneth Jabon. All rights reserved. We are not responsible for the content of linked advertisements. All sponsor content is © of the respective owner(s).-->
+<tr><td id="copyright" height="18" width=1250px>Established by Jason and Kenneth. This website is a work in progress; prizes are not being awarded.  All copyrighted material on this website is for example purposes only; it does not reflect actual sponsorship or support of this site.</td></tr> <!--Clixel © 2018 Jason and Kenneth. All rights reserved. We are not responsible for the content of linked advertisements. All sponsor content is © of the respective owner(s).-->
 
 
 </table>
