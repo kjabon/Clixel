@@ -139,7 +139,7 @@ function mouseinfo(event) {
 <img class=sponsorimage hidden="hidden" src="./index_files/Facebook.png" style="position:absolute; TOP:0; LEFT:0;" width="625" height="400">
 <area onmouseover="sponsor(this)" type="button" class="btn btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/oT6Xd5QsBOE" data-target="#myModal" shape="rect" coords="625,0,1250,400" title="Google">
 <img class=sponsorimage hidden="hidden" src="./index_files/Google.jpg" style="position:absolute; TOP:0; LEFT:625px;" width="625" height="400">
-<area onmouseover="sponsor(this)" type="button" class="btn btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/J6-8DQALGt4" data-target="#myModal" shape="rect" coords="0,400,625,800" title="Amazon">
+<area onmouseover="sponsor(this)" type="button" class="btn btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/EctzLTFrktc" data-target="#myModal" shape="rect" coords="0,400,625,800" title="Amazon">
 <img class=sponsorimage hidden="hidden" src="./index_files/Amazon.jpg" style="position:absolute; TOP:400px; LEFT:0;" width="625" height="400">
 <area onmouseover="sponsor(this)" type="button" class="btn btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/8rwsuXHA7RA" data-target="#myModal" shape="rect" coords="625,400,1250,800" title="Apple">
 <img class=sponsorimage hidden="hidden" src="./index_files/Apple.png" style="position:absolute; TOP:400px; LEFT:625px;" width="625" height="400">
